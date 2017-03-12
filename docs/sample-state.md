@@ -18,24 +18,23 @@
     photos: [2, ...]
   },
   photo: {
-    detail: {
-      1: {
-        url: "assets/images/default",
-        author_id: 1,
-        author: "",
-        caption: "What a great view!",
-        created_at: "date",
-        comments: {
-          1: {
-            username: "hbk",
-            body: "This is awesome!"
-          }
-        },
-        likes: {
-          1: {
-            id: 1,
-            username: "instagrammer"
-          }
+    1: {
+      id: 1
+      url: "assets/images/default",
+      author_id: 1,
+      author: "",
+      caption: "What a great view!",
+      created_at: "date",
+      comments: {
+        1: {
+          username: "hbk",
+          body: "This is awesome!"
+        }
+      },
+      likes: {
+        1: {
+          id: 1,
+          username: "instagrammer"
         }
       }
     }
