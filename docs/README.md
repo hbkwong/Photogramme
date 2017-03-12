@@ -44,11 +44,11 @@ Instagramme is a web application inspired by Instagram built using Ruby on Rails
 
 ### Phase 3: Likes (2 days)
 
-**Objective:** Likes belong to photos, which can be liked and un-liked through the API.
+**Objective:** Photos can be liked and un-liked through the API.
 
 ### Phase 4: Comments (1 day)
 
-**Objective:** Comments for photos can be created, viewed, and destroyed through the API.
+**Objective:** Comments for photos can be created and viewed through the API.
 
 ### Phase 5: Photo feed (2 days)
 
