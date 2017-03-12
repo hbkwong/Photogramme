@@ -1,5 +1,6 @@
 # Instagramme
 [Heroku link (TBD)][heroku]
+
 [Trello link][trello]
 
 [heroku]: http://www.herokuapp.com
@@ -18,11 +19,11 @@ Instagramme is a web application inspired by Instagram built using Ruby on Rails
 
 
 ## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
+* [View wireframes][wireframes]
+* [React components][components]
 * [API endpoints][api-endpoints]
 * [DB schema][schema]
-* [Sample State][sample-state]
+* [Sample state][sample-state]
 
 [wireframes]: /wireframes
 [components]: component-hierarchy.md
