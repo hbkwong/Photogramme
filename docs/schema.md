@@ -16,6 +16,28 @@ profile_photo   | string    |
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-author_id       | integer   | not null, foreign key (references users), indexed
 url             | string    | not null
 caption         | text      |
+author_id       | integer   | not null, foreign key (references users), indexed
+
+## follows
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+follower_id | integer   | not null, foreign key (references users), indexed
+following_id| integer   | not null, foreign key (references users), indexed
+
+## likes
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+liker_id    | integer   | not null, foreign key (references users), indexed
+photo_id    | integer   | not null, foreign key (references photos), indexed
+
+## comments
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+body        | text      | not null
+user_id     | integer   | not null, foreign key (references users), indexed
+photo_id    | integer   | not null, foreign key (references photos), indexed
