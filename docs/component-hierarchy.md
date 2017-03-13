@@ -1,40 +1,40 @@
 ## Component Hierarchy
 
-**AuthFormContainer
+**AuthFormContainer**
 - AuthForm
 
-**NavContainer
+**NavContainer**
 - SearchContainer
 
-**FeedContainer
+**FeedContainer**
 - NavContainer
 - FeedIndex
   - PhotoListItem
     - CommentContainer
     - CommentItem
 
-**ProfileContainer
+**ProfileContainer****
 - NavContainer
 - ProfileIndex
 
-**PhotoContainer
+**PhotoContainer**
 - PhotoDetail
 - CommentContainer
   - CommentItem
 
-**ProfileEditContainer
+**ProfileEditContainer**
 - ProfileForm
 
-**AddPhotoContainer
+**AddPhotoContainer**
 - AddPhoto
 
-**CommentContainer
+**CommentContainer**
 - CommentItem
 
-**FollowingContainer
+**FollowingContainer**
 - UserListItem
 
-**FollowerContainer
+**FollowerContainer**
 - UserListItem
 
 
