@@ -1,9 +1,9 @@
 # Instagramme
-[Heroku link (TBD)][heroku]
+[Heroku link][heroku]
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://instagramme-aw.herokuapp.com
 [trello]: https://trello.com/b/5D0Wgko3/full-stack-project-instagramme
 
 
