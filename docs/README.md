@@ -25,7 +25,7 @@ Instagramme is a web application inspired by Instagram built using Ruby on Rails
 * [DB schema][schema]
 * [Sample state][sample-state]
 
-[wireframes]: /wireframes
+[wireframes]: ./wireframes
 [components]: component-hierarchy.md
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
