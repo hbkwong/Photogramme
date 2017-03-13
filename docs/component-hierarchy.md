@@ -13,7 +13,7 @@
     - CommentContainer
     - CommentItem
 
-**ProfileContainer****
+**ProfileContainer**
 - NavContainer
 - ProfileIndex
 
