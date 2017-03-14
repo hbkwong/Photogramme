@@ -16,7 +16,7 @@ profile_photo   | string    |
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-url             | string    | not null
+url             | text      | not null
 caption         | text      |
 author_id       | integer   | not null, foreign key (references users), indexed
 
@@ -24,14 +24,14 @@ author_id       | integer   | not null, foreign key (references users), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-follower_id | integer   | not null, foreign key (references users), indexed
+follower_id | integer   | not null, foreign key (references users), indexed, unique [following_id]
 following_id| integer   | not null, foreign key (references users), indexed
 
 ## likes
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-liker_id    | integer   | not null, foreign key (references users), indexed
+liker_id    | integer   | not null, foreign key (references users), indexed unique [photo_id]
 photo_id    | integer   | not null, foreign key (references photos), indexed
 
 ## comments
