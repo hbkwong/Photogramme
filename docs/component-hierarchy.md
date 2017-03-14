@@ -41,11 +41,12 @@
 ## Routes
 |Path   | Component   |
 |-------|-------------|
-| "/" | "AuthFormContainer" |
+| "/sign-in" | "AuthFormContainer" |
+| "/sign-up" | "AuthFormContainer" |
 | "/" | "FeedContainer" |
-| "/:username" | "ProfileContainer" |
-| "/:username/edit" | "ProfileEditContainer" |
-| "/:username/following" | "FollowingContainer" |
-| "/:username/followers" | "FollowerContainer" |
-| "/:username/add" | "AddPhotoContainer" |
-| "/:photo_id/?:taken-by/:username" | "PhotoDetailContainer" |
+| "/:id" | "ProfileContainer" |
+| "/:id/edit" | "ProfileEditContainer" |
+| "/:id/following" | "FollowingContainer" |
+| "/:id/followers" | "FollowerContainer" |
+| "/upload" | "AddPhotoContainer" |
+| "/photos/:id" | "PhotoDetailContainer" |
