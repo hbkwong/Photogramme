@@ -12,7 +12,7 @@
   user: {
     id: 1,
     username: "instagrammer",
-    about: "Taking photos all around the world!",
+    bio: "Taking photos all around the world!",
     followers: [2, ...],
     following: [2, ...],
     photos: [2, ...]
