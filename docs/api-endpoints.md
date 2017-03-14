@@ -17,10 +17,6 @@
 - `PATCH /api/users/:id`
 - `GET /api/users/:id/photos`
   - Index of photos for a particular user
-- `GET /api/users/:id/followers`
-  - Index of users that follow a particular user
-- `GET /api/users/:id/following`
-  - Index of users that a particular user is following
 
 ### Session
 
@@ -34,10 +30,6 @@
 - `GET /api/photos/:id`
 - `PATCH /api/photos/:id`
 - `DELETE /api/photos/:id`
-- `GET /api/photos/:id/likes`
-  - Index of all likes for a particular photo
-- `GET /api/photos/:id/comments`
-  - Index of all comments for a particular photo
 
 ### Likes
 - `POST /api/photos/:photo_id/likes`

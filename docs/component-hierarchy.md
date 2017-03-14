@@ -45,8 +45,6 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/" | "FeedContainer" |
 | "/:id" | "ProfileContainer" |
-| "/:id/edit" | "ProfileEditContainer" |
-| "/:id/following" | "FollowingContainer" |
-| "/:id/followers" | "FollowerContainer" |
+| "/edit" | "ProfileEditContainer" |
 | "/upload" | "AddPhotoContainer" |
 | "/photos/:id" | "PhotoDetailContainer" |
