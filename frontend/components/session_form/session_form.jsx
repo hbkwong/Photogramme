@@ -17,6 +17,12 @@ class SessionForm extends React.Component {
     this.redirectIfLoggedIn();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.formType !== newProps.formType) {
+      this.props.clearErrors();
+    }
+  }
+
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
       this.props.router.push("/");
@@ -36,15 +42,17 @@ class SessionForm extends React.Component {
   }
 
   renderErrors () {
-    return (
-      <ul>
-        {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors) {
+      return (
+        <ul>
+          {this.props.errors.map((error, idx) => (
+            <li key={`error-${idx}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   renderSignUp () {
@@ -89,7 +97,6 @@ class SessionForm extends React.Component {
           {this.renderErrors()}
           <div className='login-form'>
             {this.renderSignUp()}
-            <br />
             <label>Username:
               <input
                 type="text"
