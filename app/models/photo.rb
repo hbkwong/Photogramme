@@ -12,4 +12,26 @@
 #
 
 class Photo < ApplicationRecord
+  belongs_to :user
+
+  validates :user, presence: true
+  validates :url, presence: true
+
+  def since_taken
+    mins = ((Time.now - self.created_at) / 1.minute).round
+    hrs = ((Time.now - self.created_at) / 1.hour).round
+
+    # 168 hours == 1 week
+    if hrs >= 168
+      result = "#{(hrs / 168).round}w"
+    elsif hrs >= 24
+      result = "#{(hrs / 24).round}d"
+    elsif hrs >= 1
+      result = "#{hrs}h"
+    else
+      result = "#{mins}m"
+    end
+
+    result
+  end
 end
