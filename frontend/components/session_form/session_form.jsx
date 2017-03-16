@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       name: "",
       email: ""
     };
+    this.loginGuest = this.loginGuest.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -39,6 +40,11 @@ class SessionForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  loginGuest () {
+    const user = {username: "guest", password: "password"};
+    this.props.login(user);
   }
 
   renderErrors () {
@@ -131,6 +137,12 @@ class SessionForm extends React.Component {
                   className='button'
                   type="submit"
                   value="Submit" />
+                <br />
+                <input
+                  className='button'
+                  type="button"
+                  value="guest"
+                  onClick={this.loginGuest} />
             </div>
 
           </form>

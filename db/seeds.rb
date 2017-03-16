@@ -12,6 +12,6 @@ guest = User.create!(
   password: "password",
   name: "Guest",
   email: "guest@guest.com",
-  bio: "I am a guest user of Instagramme"
-  profile_photo_url: ""
+  bio: "I am a guest user of Instagramme",
+  profile_photo_url: "string"
 )
