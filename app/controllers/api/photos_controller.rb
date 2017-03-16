@@ -17,6 +17,22 @@ class Api::PhotosController < ApplicationController
     end
   end
 
+  def show
+    @photo = Photo.find_by(id: params[:id])
+    render json: @photo
+  end
+
+  def destroy
+    @photo = Photo.find_by(id: params[:id])
+
+    if @photo
+      @photo.destroy
+      render json: { }
+    else
+      render json: ["Photo does not exist"], status: 404
+    end
+  end
+
   private
 
   def photo_params
