@@ -100,9 +100,8 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <section className='auth-section'>
+      <div className='auth-section'>
         <div className='auth-form'>
-
           <form onSubmit={this.handleSubmit} className='box'>
             <div className='form-header'>Instagramme</div>
 
@@ -139,7 +138,7 @@ class SessionForm extends React.Component {
         </div>
 
        {this.navLink()}
-     </section>
+     </div>
     );
   }
 }
