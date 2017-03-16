@@ -59,16 +59,18 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'signup') {
       return (
         <div>
-          <label>Name:
+          <label>
             <input
+              placeholder="Name"
               type="text"
               value={this.state.name}
               onChange={this.update('name')}
               className='login-input' />
           </label>
           <br />
-          <label>Email:
+          <label>
             <input
+              placeholder="Email"
               type="text"
               value={this.state.email}
               onChange={this.update('email')}
@@ -81,41 +83,57 @@ class SessionForm extends React.Component {
 
   navLink () {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>;
+      return (
+        <div>
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </div>
+      );
     } else {
-      return <Link to="/login">log in instead</Link>;
+      return (
+        <div>
+          Have an account? <Link to="/login">Log in</Link>
+        </div>
+
+      );
     }
   }
 
   render () {
     return (
       <div className='auth-form'>
-        <form onSubmit={this.handleSubmit} className='login-form-box'>
-          Welcome to Instagramme!
+        <form onSubmit={this.handleSubmit} className='form-box'>
+          <div className='form-header'>Instagramme</div>
           <br />
-          Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
           <div className='login-form'>
             {this.renderSignUp()}
-            <label>Username:
+            <label>
               <input
+                placeholder="Username"
                 type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className='login-input' />
             </label>
             <br />
-              <label>Password:
+              <label>
                 <input
+                  placeholder="Password"
                   type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className='login-input' />
               </label>
               <br />
-              <input type="submit" value="Submit" />
+              <input
+                className='button'
+                type="submit"
+                value="Submit" />
           </div>
         </form>
+        <div className='form-link'>
+          {this.navLink()}
+        </div>
       </div>
     );
   }
