@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.delete_all
+
+guest = User.create!(
+  username: "guest",
+  password: "password",
+  name: "Guest",
+  email: "guest@guest.com",
+  bio: "I am a guest user of Instagramme"
+  profile_photo_url: ""
+)

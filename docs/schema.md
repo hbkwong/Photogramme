@@ -18,7 +18,8 @@ column name     | data type | details
 id              | integer   | not null, primary key
 url             | text      | not null
 caption         | text      |
-author_id       | integer   | not null, foreign key (references users), indexed
+location        | string    |
+user_id         | integer   | not null, foreign key (references users), indexed
 
 ## follows
 column name | data type | details

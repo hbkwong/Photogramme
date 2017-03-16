@@ -16,7 +16,7 @@
 
 class User < ApplicationRecord
 
-  # add associations
+  has_many :photos
 
   validates :username, :password_digest, :session_token, :email, :name, presence: true
   validates :username, :session_token, :email, uniqueness: true
