@@ -100,41 +100,45 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <div className='auth-form'>
-        <form onSubmit={this.handleSubmit} className='form-box'>
-          <div className='form-header'>Instagramme</div>
-          <br />
-          {this.renderErrors()}
-          <div className='login-form'>
-            {this.renderSignUp()}
-            <label>
-              <input
-                placeholder="Username"
-                type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className='login-input' />
-            </label>
-            <br />
-              <label>
-                <input
-                  placeholder="Password"
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className='login-input' />
-              </label>
+      <section className='auth-section'>
+        <div className='form-box'>
+          <div className='auth-form'>
+            <form onSubmit={this.handleSubmit} className='form-box'>
+              <div className='form-header'>Instagramme</div>
               <br />
-              <input
-                className='button'
-                type="submit"
-                value="Submit" />
+              {this.renderErrors()}
+              <div className='login-form'>
+                {this.renderSignUp()}
+                <label>
+                  <input
+                    placeholder="Username"
+                    type="text"
+                    value={this.state.username}
+                    onChange={this.update('username')}
+                    className='login-input' />
+                </label>
+                <br />
+                  <label>
+                    <input
+                      placeholder="Password"
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className='login-input' />
+                  </label>
+                  <br />
+                  <input
+                    className='button'
+                    type="submit"
+                    value="Submit" />
+              </div>
+            </form>
           </div>
-        </form>
-        <div className='form-link'>
-          {this.navLink()}
-        </div>
-      </div>
+         </div>
+       <div className='form-box'>
+         {this.navLink()}
+       </div>
+     </section>
     );
   }
 }
