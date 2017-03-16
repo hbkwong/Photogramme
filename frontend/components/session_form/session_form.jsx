@@ -58,7 +58,7 @@ class SessionForm extends React.Component {
   renderSignUp () {
     if (this.props.formType === 'signup') {
       return (
-        <div>
+        <div className='login-form'>
           <label>
             <input
               placeholder="Name"
@@ -84,13 +84,13 @@ class SessionForm extends React.Component {
   navLink () {
     if (this.props.formType === 'login') {
       return (
-        <div>
+        <div className='box'>
           Don't have an account? <Link to="/signup">Sign up</Link>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className='box'>
           Have an account? <Link to="/login">Log in</Link>
         </div>
 
@@ -101,43 +101,44 @@ class SessionForm extends React.Component {
   render () {
     return (
       <section className='auth-section'>
-        <div className='form-box'>
-          <div className='auth-form'>
-            <form onSubmit={this.handleSubmit} className='form-box'>
-              <div className='form-header'>Instagramme</div>
+        <div className='auth-form'>
+
+          <form onSubmit={this.handleSubmit} className='box'>
+            <div className='form-header'>Instagramme</div>
+
+            {this.renderErrors()}
+
+            <div className='login-form'>
+              {this.renderSignUp()}
+              <label>
+                <input
+                  placeholder="Username"
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className='login-input' />
+              </label>
               <br />
-              {this.renderErrors()}
-              <div className='login-form'>
-                {this.renderSignUp()}
                 <label>
                   <input
-                    placeholder="Username"
-                    type="text"
-                    value={this.state.username}
-                    onChange={this.update('username')}
+                    placeholder="Password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
                     className='login-input' />
                 </label>
                 <br />
-                  <label>
-                    <input
-                      placeholder="Password"
-                      type="password"
-                      value={this.state.password}
-                      onChange={this.update('password')}
-                      className='login-input' />
-                  </label>
-                  <br />
-                  <input
-                    className='button'
-                    type="submit"
-                    value="Submit" />
-              </div>
-            </form>
-          </div>
-         </div>
-       <div className='form-box'>
-         {this.navLink()}
-       </div>
+                <input
+                  className='button'
+                  type="submit"
+                  value="Submit" />
+            </div>
+
+          </form>
+
+        </div>
+
+       {this.navLink()}
      </section>
     );
   }

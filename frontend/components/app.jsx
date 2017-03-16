@@ -3,7 +3,6 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = ({ children }) => (
   <div>
-    <h1>Instagramme</h1>
     <GreetingContainer />
     { children }
   </div>
