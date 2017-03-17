@@ -10,8 +10,12 @@ class PhotoForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      uploadedFileCloudinaryUrl: ''
+      url: '',
+      caption: '',
+      location: ''
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   onImageDrop(files) {
@@ -34,33 +38,71 @@ class PhotoForm extends React.Component {
 
       if (response.body.secure_url !== '') {
         this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url
+          url: response.body.secure_url
         });
       }
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const photo = this.state;
+    this.props.addPhoto(photo);
+  }
+
+  update (field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
     });
   }
 
   render () {
     return (
       <div>
-        <Dropzone
-          multiple={false}
-          accept="image/*"
-          onDrop={this.onImageDrop.bind(this)}>
-          <p>Drop an image or click to select a file to upload.</p>
-        </Dropzone>
-        <div>
-          <div className="FileUpload">
-            ...
-          </div>
+        <div className="upload-section">
+          <Dropzone
+            multiple={false}
+            accept="image/*"
+            onDrop={this.onImageDrop.bind(this)}>
+            <p>Drag and drop an image</p>
+            <p>(or click to select a file to share)</p>
+          </Dropzone>
 
           <div>
-            {this.state.uploadedFileCloudinaryUrl === '' ? null :
             <div>
-              <p>{this.state.uploadedFile.name}</p>
-              <img src={this.state.uploadedFileCloudinaryUrl} />
-            </div>}
+              {this.state.url === '' ? null :
+              <div>
+                <p>{this.state.uploadedFile.name}</p>
+                <img src={this.state.url} />
+              </div>}
+            </div>
           </div>
+        </div>
+
+        <div className="form">
+          <form onSubmit={this.handleSubmit}>
+            <div className="upload-inputs">
+              <textarea
+                className="inputs"
+                value={this.state.caption}
+                placeholder="Write a caption..."
+                onChange={this.update('caption')} />
+              <br />
+              <input
+                type="text"
+                className="inputs"
+                value={this.state.location}
+                placeholder="Where did you take this photo?"
+                onChange={this.update('location')}/>
+              <br />
+              <input
+                type="text"
+                className="inputs"
+                value={this.state.url}
+                onChange={this.update('url')}/>
+              <input type='submit' value='Share' className="upload-submit" />
+            </div>
+          </form>
         </div>
       </div>
     );
