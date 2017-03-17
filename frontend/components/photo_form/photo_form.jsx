@@ -10,9 +10,9 @@ class PhotoForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: '',
-      caption: '',
-      location: ''
+      url: "",
+      caption: "",
+      location: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,6 +47,7 @@ class PhotoForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const photo = this.state;
+    delete photo["uploadedFile"];
     this.props.addPhoto(photo);
   }
 
@@ -100,7 +101,10 @@ class PhotoForm extends React.Component {
                 className="inputs"
                 value={this.state.url}
                 onChange={this.update('url')}/>
-              <input type='submit' value='Share' className="upload-submit" />
+              <input
+                type='submit'
+                value='Share'
+                className="upload-submit" />
             </div>
           </form>
         </div>
