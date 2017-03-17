@@ -4,7 +4,51 @@
   flex-direction: column;
   background-color: $med-gray;
 }
+
 .dropzone {
+  background-color: $med-gray;
+  color: $dark-gray;
+}
+
+.upload-submit {
+  border-radius: 4px;
+  font-size: 16px;
+  color: $light-gray;
+  background-color: $blue;
+  border: none;
+  padding: 10px;
+  width: 258px;
+  margin: 3px 0;
+  margin-top: 12px;
+}
+
+.upload-submit:active {
+  border-radius: 4px;
+  font-size: 16px;
+  color: $med-gray;
+  background-color: #87c0f6;
+  border: none;
+  padding: 10px;
+  width: 250px;
+  margin: 3px 0;
+}
+
+.upload-inputs {
+  font-size: 14px;
+  width: 100%;
+  border: 1px;
+  border-radius: 3px;
+  margin: 3px 0;
+  position: relative;
+  padding: 9px 8px 7px;
+  background-color: $light-gray;
+}
+
+.upload-form {
+  background-color: $light-gray;
+}
+
+.dropzone-msg {
   background-color: $med-gray;
   color: $dark-gray;
 }

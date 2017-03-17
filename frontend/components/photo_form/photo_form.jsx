@@ -67,19 +67,15 @@ class PhotoForm extends React.Component {
             accept="image/*"
             className="dropzone"
             onDrop={this.onImageDrop.bind(this)}>
-            <p>Drag and drop an image</p>
-            <p>(or click here to select)</p>
-          </Dropzone>
-
-          <div>
-            <div>
-              {this.state.url === '' ? null :
+            <div className="dropzone-msg">
+              {this.state.url === '' ? 'Drop and drop or select an image' :
               <div>
-                <p>Preview of {this.state.uploadedFile.name}</p>
                 <img src={this.state.url} />
               </div>}
             </div>
-          </div>
+          </Dropzone>
+
+
         </div>
 
         <div className="upload-form">
@@ -107,6 +103,7 @@ class PhotoForm extends React.Component {
                 type='submit'
                 value='Share'
                 className="upload-submit" />
+              <br />
             </div>
           </form>
         </div>
