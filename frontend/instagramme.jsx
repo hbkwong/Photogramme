@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import {requestPhotos, requestPhoto, addPhoto, deletePhoto} from './actions/photo_actions';
+import {requestUserInfo } from './actions/profile_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -15,8 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
   window.store = store;
-  window.requestPhotos = requestPhotos;
-  window.requestPhoto = requestPhoto;
-  window.addPhoto = addPhoto;
-  window.deletePhoto = deletePhoto;
+  window.requestUserInfo = requestUserInfo;
 });
