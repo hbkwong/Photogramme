@@ -141,7 +141,7 @@ class SessionForm extends React.Component {
                 <input
                   className='button'
                   type="button"
-                  value="guest"
+                  value="Guest Login"
                   onClick={this.loginGuest} />
             </div>
 
