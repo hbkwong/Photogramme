@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import Modal from 'react-modal';
 
 const CLOUDINARY_UPLOAD_PRESET = 'igpreset';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/instagramme/image/upload';
@@ -64,41 +65,42 @@ class PhotoForm extends React.Component {
           <Dropzone
             multiple={false}
             accept="image/*"
+            className="dropzone"
             onDrop={this.onImageDrop.bind(this)}>
             <p>Drag and drop an image</p>
-            <p>(or click to select a file to share)</p>
+            <p>(or click here to select)</p>
           </Dropzone>
 
           <div>
             <div>
               {this.state.url === '' ? null :
               <div>
-                <p>{this.state.uploadedFile.name}</p>
+                <p>Preview of {this.state.uploadedFile.name}</p>
                 <img src={this.state.url} />
               </div>}
             </div>
           </div>
         </div>
 
-        <div className="form">
+        <div className="upload-form">
           <form onSubmit={this.handleSubmit}>
             <div className="upload-inputs">
               <textarea
-                className="inputs"
+                className="upload-inputs"
                 value={this.state.caption}
                 placeholder="Write a caption..."
                 onChange={this.update('caption')} />
               <br />
               <input
                 type="text"
-                className="inputs"
+                className="upload-inputs"
                 value={this.state.location}
                 placeholder="Where did you take this photo?"
                 onChange={this.update('location')}/>
               <br />
               <input
-                type="text"
-                className="inputs"
+                type="hidden"
+                className="upload-inputs"
                 value={this.state.url}
                 onChange={this.update('url')}/>
               <input

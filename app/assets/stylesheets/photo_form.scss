@@ -1,0 +1,10 @@
+.upload-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $med-gray;
+}
+.dropzone {
+  background-color: $med-gray;
+  color: $dark-gray;
+}
