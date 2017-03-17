@@ -74,8 +74,6 @@ class PhotoForm extends React.Component {
               </div>}
             </div>
           </Dropzone>
-
-
         </div>
 
         <div className="upload-form">
@@ -99,6 +97,7 @@ class PhotoForm extends React.Component {
                 className="upload-inputs"
                 value={this.state.url}
                 onChange={this.update('url')}/>
+              <br />
               <input
                 type='submit'
                 value='Share'
