@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form/session_form_container';
-
+import PhotoFormContainer from './photo_form/photo_form_container';
 // react router
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 // react component
@@ -28,6 +28,7 @@ const Root = ({ store }) => {
         <Route path="/" component={ App }>
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/upload" component={ PhotoFormContainer }/>
         </Route>
       </Router>
     </Provider>
