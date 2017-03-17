@@ -1,14 +1,30 @@
-.upload-section {
-  display: flex;
+.upload-section-main {
+  // display: inline;
   align-items: center;
   flex-direction: column;
+}
+
+.upload-section {
   background-color: $med-gray;
 }
 
+.upload-form {
+  // float: right;
+  background-color: $light-gray;
+}
+
 .dropzone {
+  // float: left;
   background-color: $med-gray;
   color: $dark-gray;
   padding: 50px;
+}
+
+.dropzone-msg {
+  // float: left;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .upload-submit {
@@ -43,10 +59,6 @@
   margin: 3px 0;
   position: relative;
   padding: 9px 8px 7px;
-  background-color: $light-gray;
-}
-
-.upload-form {
   background-color: $light-gray;
 }
 

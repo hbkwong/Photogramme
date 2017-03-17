@@ -60,7 +60,7 @@ class PhotoForm extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="upload-section-main">
         <div className="upload-section">
           <Dropzone
             multiple={false}

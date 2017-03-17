@@ -13,17 +13,17 @@ export const fetchPhoto = id => (
   })
 );
 
-export const postPhoto = photo => {
+export const postPhoto = photo => (
   $.ajax ({
     method: 'POST',
     url: '/api/photos',
     data: { photo }
-  });
-};
+  })
+);
 
-export const deletePhoto = id => {
+export const deletePhoto = id => (
   $.ajax ({
     method: 'DELETE',
     url: `api/photos/${id}`
-  });
-};
+  })
+);
