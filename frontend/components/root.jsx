@@ -28,7 +28,7 @@ const Root = ({ store }) => {
         <Route path="/" component={ App }>
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
-          <Route path="/upload" component={ PhotoFormContainer }/>
+          <Route path="/upload" component={ PhotoFormContainer } onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
     </Provider>
