@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import {requestUserInfo } from '../../actions/profile_actions';
 import Profile from './profile';
 
-const mapStateToProps = (state, ownProps) => ({
-  username: ownProps.params.username,
-  currentUser: state.session.currentUser
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    username: ownProps.params.username,
+    currentUser: state.session.currentUser
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

@@ -17,9 +17,6 @@
 class User < ApplicationRecord
 
   has_many :photos
-    # foreign_key: :user_id,
-    # primary_key: :id,
-    # class_name: "Photo"
 
   validates :username, :password_digest, :session_token, :email, :name, presence: true
   validates :username, :session_token, :email, uniqueness: true
