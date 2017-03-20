@@ -9,6 +9,7 @@ class Profile extends React.Component {
       info: {
         username: '',
         name: '',
+        profile_photo_url: ''
       }
     };
   }
@@ -21,7 +22,8 @@ class Profile extends React.Component {
     this.setState({
       info: {
         username: newProps.info.username,
-        name: newProps.info.name
+        name: newProps.info.name,
+        profile_photo_url: newProps.info.profile_photo_url
       }
     });
   }
@@ -31,6 +33,10 @@ class Profile extends React.Component {
       <div className="profile-section">
 
         <div className="profile-info">
+          <img
+            src={this.state.info.profile_photo_url}
+            className="profile-photo" />
+          <br />
           {this.state.info.username}
           <br />
           {this.state.info.name}
