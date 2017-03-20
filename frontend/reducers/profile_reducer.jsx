@@ -14,7 +14,7 @@ const profileReducer = (state = defaultUser, action) => {
   switch (action.type) {
     case RECEIVE_USER_INFO:
       let info = action.userInfo;
-      return merge({}, {info});
+      return info;
     default:
       return state;
   }
