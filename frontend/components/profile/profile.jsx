@@ -41,6 +41,12 @@ class Profile extends React.Component {
           <br />
           {this.state.info.name}
           <br />
+          23 posts
+          <br />
+          280 followers
+          <br />
+          533 following
+          <br />
         </div>
 
         <div className="profile-photos">
