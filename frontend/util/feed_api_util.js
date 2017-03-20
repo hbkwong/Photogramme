@@ -1,7 +1,6 @@
-export const fetchPhotos = username => (
+export const fetchPhotos = () => (
   $.ajax ({
     method: 'GET',
-    url: '/api/photos',
-    data: { username }
+    url: '/api/photos'
   })
 );
