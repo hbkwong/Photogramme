@@ -9,7 +9,8 @@ class Profile extends React.Component {
       info: {
         username: '',
         name: '',
-        profile_photo_url: ''
+        profile_photo_url: '',
+        photos: []
       }
     };
   }
@@ -23,7 +24,8 @@ class Profile extends React.Component {
       info: {
         username: newProps.info.username,
         name: newProps.info.name,
-        profile_photo_url: newProps.info.profile_photo_url
+        profile_photo_url: newProps.info.profile_photo_url,
+        photos: newProps.info.photos
       }
     });
   }
@@ -48,6 +50,11 @@ class Profile extends React.Component {
         </div>
 
         <div className="profile-photos">
+          { this.state.info.photos.map(photo => (
+            <li>
+              <img src={photo.url} />
+            </li>))
+          }
         </div>
 
       </div>
