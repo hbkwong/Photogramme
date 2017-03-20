@@ -129,6 +129,6 @@ User.create!(
   password: "password",
   name: "Hyun Chul Kim",
   email: "hck@instagramme.com",
-  bio: "",
+  bio: "Washington, DC transplant now living in beautiful San Francisco, CA!",
   profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1489970945/Hyun_Chul_Kim_ni1hcc.jpg"
 )
