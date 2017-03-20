@@ -18,6 +18,7 @@ class User < ApplicationRecord
 
   has_many :photos
   has_many :likes
+  has_many :comments
 
   validates :username, :password_digest, :session_token, :email, :name, presence: true
   validates :username, :session_token, :email, uniqueness: true

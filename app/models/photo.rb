@@ -13,6 +13,7 @@
 
 class Photo < ApplicationRecord
   has_many :likes
+  has_many :commments
   belongs_to :user
 
   validates :user, presence: true
