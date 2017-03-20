@@ -7,7 +7,7 @@ const receivePhotos = photos => ({
   photos
 });
 
-export const requestPhotos = username => dispatch => (
-  APIUtil.fetchPhotos(username)
+export const requestPhotos = () => dispatch => (
+  APIUtil.fetchPhotos()
   .then(photos => dispatch(receivePhotos(photos)))
 );
