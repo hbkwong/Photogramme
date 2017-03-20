@@ -35,29 +35,31 @@ class Profile extends React.Component {
       <div className="profile-section">
 
         <div className="profile-info">
+
           <img
             src={this.state.info.profile_photo_url}
             className="profile-photo" />
+
           <br />
           {this.state.info.username}
           <input type="button" value="Edit Profile/Follow" />
           <br />
-          <div><b>23</b> posts</div>
+          <div><b>{this.state.info.photos.length}</b> posts</div>
           <div><b>280</b> followers</div>
           <div><b>533</b> following</div>
           {this.state.info.name}
           <br />
         </div>
 
-        <div className="profile-photos">
-          { this.state.info.photos.map((photo, idx) => (
-            <li key={idx}>
-              <img src={photo.url} />
-            </li>))
-          }
-        </div>
-
+      <div className="profile-photos">
+        { this.state.info.photos.map((photo, idx) => (
+          <li key={idx}>
+            <img src={photo.url} />
+          </li>))
+        }
       </div>
+
+    </div>
     );
   }
 }

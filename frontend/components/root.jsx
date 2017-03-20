@@ -25,13 +25,13 @@ const Root = ({ store }) => {
   };
   return (  <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/" component={ App } >
+        <Route path="/" component={ App }>
           <IndexRoute onEnter={_ensureLoggedIn}/>
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/upload" component={ PhotoFormContainer } onEnter={_ensureLoggedIn}/>
+          <Route path="/:id" component={ ProfileContainer } onEnter={_ensureLoggedIn}/>
         </Route>
-        <Route path="/upload" component={ PhotoFormContainer } onEnter={_ensureLoggedIn}/>
-        <Route path="/:id" component={ ProfileContainer } onEnter={_ensureLoggedIn}/>
       </Router>
     </Provider>
   );
