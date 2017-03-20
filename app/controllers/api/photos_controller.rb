@@ -1,9 +1,10 @@
 class Api::PhotosController < ApplicationController
   def index
-    user = User.find_by(username: params[:username])
-    @photos = Photo.where(user_id: user.id)
-    # render 'api/photos/index'
-    render json: @photos
+    # user = User.find_by(username: params[:username])
+    # @photos = Photo.where(user_id: user.id)
+    # # render 'api/photos/index'
+    # render json: @photos
+    @photos = Photo.all
   end
 
   def create
