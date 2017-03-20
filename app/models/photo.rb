@@ -12,6 +12,7 @@
 #
 
 class Photo < ApplicationRecord
+  has_many :likes
   belongs_to :user
 
   validates :user, presence: true
