@@ -50,8 +50,8 @@ class Profile extends React.Component {
         </div>
 
         <div className="profile-photos">
-          { this.state.info.photos.map(photo => (
-            <li>
+          { this.state.info.photos.map((photo, idx) => (
+            <li key={idx}>
               <img src={photo.url} />
             </li>))
           }

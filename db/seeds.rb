@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Users
+
 User.delete_all
 
 guest = User.create!(
@@ -131,4 +134,43 @@ User.create!(
   email: "hck@instagramme.com",
   bio: "Washington, DC transplant now living in beautiful San Francisco, CA!",
   profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1489970945/Hyun_Chul_Kim_ni1hcc.jpg"
+)
+
+# Photos
+
+Photo.delete_all
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490028608/k7tvoxieu0ca5vqcqvvg.jpg",
+  caption: "Old school cool",
+  location: "San Francisco, CA",
+  user_id: 1
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490034152/jason-thomas-186778_yhcdmk.jpg",
+  caption: "On top of the world!",
+  location: "Scotland",
+  user_id: 1
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490034173/austin-neill-159603_pzvsaq.jpg",
+  caption: "Great day at the beach 🏖️",
+  location: "Venice Beach, CA",
+  user_id: 1
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490034238/aaron-burden-168408_fhtmgr.jpg",
+  caption: "Loving the pacific coast",
+  location: "PCH, CA",
+  user_id: 1
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490034213/web-agency-29200_ml8alz.jpg",
+  caption: "Rustic.",
+  location: "Laguna Beach, CA",
+  user_id: 1
 )
