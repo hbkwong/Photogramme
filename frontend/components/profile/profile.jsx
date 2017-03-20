@@ -38,14 +38,12 @@ class Profile extends React.Component {
             className="profile-photo" />
           <br />
           {this.state.info.username}
+          <input type="button" value="Edit Profile/Follow" />
           <br />
+          <div><b>23</b> posts</div>
+          <div><b>280</b> followers</div>
+          <div><b>533</b> following</div>
           {this.state.info.name}
-          <br />
-          23 posts
-          <br />
-          280 followers
-          <br />
-          533 following
           <br />
         </div>
 

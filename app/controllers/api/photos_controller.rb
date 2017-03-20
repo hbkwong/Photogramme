@@ -11,7 +11,7 @@ class Api::PhotosController < ApplicationController
     @photo.user_id = current_user.id
 
     if @photo.save
-      render json: @photo
+      render '/api/photos/show'
     else
       render json: @photo.errors.full_messages, status: 422
     end
@@ -19,7 +19,7 @@ class Api::PhotosController < ApplicationController
 
   def show
     @photo = Photo.find_by(id: params[:id])
-    render json: @photo
+    render '/api/photos/show'
   end
 
   def destroy
