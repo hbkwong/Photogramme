@@ -8,14 +8,33 @@
 
 .nav-logo {
   width: 30px;
+  background: #FFFFFF;
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-divider {
+  height: 30px;
+  border-right: 1px solid #999;
+  padding: 0 8px;
 }
 
 .nav-instagramme {
   font-family: 'Cookie', cursive;
   font-size: 30px;
   background: #FFFFFF;
+  display: inline-block;
+  padding: 12px
 }
 
 .nav-icons {
   background: #FFFFFF;
+  
 }
