@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { requestUserInfo } from '../../actions/profile_actions';
+import { logout } from '../../actions/session_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    requestUserInfo: userInfo => dispatch(requestUserInfo(userInfo))
+    requestUserInfo: userInfo => dispatch(requestUserInfo(userInfo)),
+    logout: () => dispatch(logout())
   };
 };
 

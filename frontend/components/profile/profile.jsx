@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -13,6 +13,12 @@ class Profile extends React.Component {
         photos: []
       }
     };
+    this.logoutAndRedirect = this.logoutAndRedirect.bind(this);
+  }
+
+  logoutAndRedirect () {
+    this.props.logout();
+    this.props.router.push('/');
   }
 
   componentDidMount() {
@@ -43,6 +49,7 @@ class Profile extends React.Component {
           <br />
           {this.state.info.username}
           <input type="button" value="Edit Profile/Follow" />
+          <input type="button" value="Log out" onClick={this.logoutAndRedirect} />
           <br />
           <div><b>{this.state.info.photos.length}</b> posts</div>
           <div><b>280</b> followers</div>
