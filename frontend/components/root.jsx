@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form/session_form_container';
 import PhotoFormContainer from './photo_form/photo_form_container';
 import ProfileContainer from './profile/profile_container';
+import FeedContainer from './feed/feed_container';
 // react router
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 // react component
@@ -30,6 +31,7 @@ const Root = ({ store }) => {
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/upload" component={ PhotoFormContainer } onEnter={_ensureLoggedIn}/>
+          <Route path="/feed" component={ FeedContainer } onEnter={_ensureLoggedIn}/>
           <Route path="/:id" component={ ProfileContainer } onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
