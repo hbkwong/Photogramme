@@ -6,13 +6,27 @@ class Feed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      // photos: {
+      //   caption: '',
+      //   likes: [],
+      //   url: ''
+      // }
     };
   }
 
   componentDidMount() {
     this.props.requestPhotos();
   }
+
+  // componentWillReceiveProps(newProps) {
+  //   this.setState({
+  //     photos: {
+  //       caption: newProps.photos.caption,
+  //       likes: newProps.photos.likes,
+  //       url: newProps.photos.url
+  //     }
+  //   });
+  // }
 
   render () {
     return (
