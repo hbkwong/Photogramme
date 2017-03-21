@@ -17,6 +17,7 @@
 }
 
 .nav-link {
+  background: #FFFFFF;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,6 +27,7 @@
   height: 30px;
   border-right: 1px solid #999;
   padding: 0 8px;
+  background: #FFFFFF;
 }
 
 .nav-instagramme {
@@ -33,7 +35,7 @@
   font-size: 30px;
   background: #FFFFFF;
   display: inline-block;
-  padding: 12px
+  padding: 12px;
 }
 
 .nav-icons {
@@ -41,5 +43,6 @@
 }
 
 .nav-profile-link {
-  padding-left: 30px
+  padding-left: 30px;
+  background: #FFFFFF;
 }

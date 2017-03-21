@@ -40,7 +40,7 @@ class Profile extends React.Component {
     return (
       <div className="profile-section">
 
-        <div className="profile-info">
+        <div className="profile-all-info">
 
           <img
             src={this.state.info.profile_photo_url}
