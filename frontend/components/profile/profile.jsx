@@ -17,8 +17,8 @@ class Profile extends React.Component {
   }
 
   logoutAndRedirect () {
-    this.props.logout();
-    this.props.router.push('/');
+    this.props.logout()
+    .then(() => hashHistory.push('/'));
   }
 
   componentDidMount() {
