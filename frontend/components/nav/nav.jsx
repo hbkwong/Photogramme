@@ -14,8 +14,11 @@ const Nav = (props) => {
       </div>
 
       <div className="nav-icons">
+        <Link className="nav-upload-link" to="/upload">
+          <i className="fa fa-camera fa-2x" aria-hidden="true"></i>
+        </Link>
         <Link className="nav-profile-link" to={`/${props.currentUser.id}`}>
-          <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+          <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
         </Link>
       </div>
     </div>
