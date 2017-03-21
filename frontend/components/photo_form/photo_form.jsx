@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import Modal from 'react-modal';
@@ -49,7 +49,7 @@ class PhotoForm extends React.Component {
     e.preventDefault();
     const photo = this.state;
     delete photo["uploadedFile"];
-    this.props.addPhoto(photo);
+    this.props.addPhoto(photo).then(hashHistory.push(`/${this.props.currentUser.id}`));
   }
 
   update (field) {

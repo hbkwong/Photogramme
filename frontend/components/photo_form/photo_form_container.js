@@ -2,6 +2,12 @@ import { connect } from 'react-redux';
 import { requestPhotos, requestPhoto, addPhoto, deletePhoto } from '../../actions/photo_actions';
 import PhotoForm from './photo_form';
 
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.session.currentUser,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => (
   {
     addPhoto: photo => dispatch(addPhoto(photo))
@@ -9,6 +15,6 @@ const mapDispatchToProps = (dispatch) => (
 );
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(PhotoForm);
