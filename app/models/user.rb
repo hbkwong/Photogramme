@@ -20,6 +20,26 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
 
+  # Gets the 'Follow' relationship objects
+  # where the user is being followed
+  has_many :follower_relationships,
+    class_name: "Follow",
+    foreign_key: :following_id
+
+  # Accesses the user's followers through
+  # the above relationships
+  has_many :followers,
+    through: :follower_relationships,
+    source: :follower
+
+  has_many :following_relationships,
+    class_name: "Follow",
+    foreign_key: :follower_id
+
+  has_many :followings,
+    through: :following_relationships,
+    source: :following
+
   validates :username, :password_digest, :session_token, :email, :name, presence: true
   validates :username, :session_token, :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
