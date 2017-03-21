@@ -33,6 +33,7 @@ class Feed extends React.Component {
       <div className="feed-photos">
         { this.props.photos.map((photo, idx) => (
           <li key={idx}>
+            {photo.user.username}
             <img src={photo.url} />
           </li>))
         }
