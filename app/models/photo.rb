@@ -12,7 +12,7 @@
 #
 
 class Photo < ApplicationRecord
-  has_many :commments
+  has_many :comments
   belongs_to :user
 
   has_many :likes
