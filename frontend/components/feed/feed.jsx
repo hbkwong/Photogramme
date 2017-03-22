@@ -29,6 +29,7 @@ class Feed extends React.Component {
   // }
 
   render () {
+    console.log(this.props);
     return (
       <div className="feed-photos">
         { this.props.photos.map((photo, idx) => (
@@ -38,9 +39,9 @@ class Feed extends React.Component {
             Likes: {photo.likes.length}
             <br />
             { photo.comments.map((comment, i) => (
-              <p key={i}>{comment.user_id}:{comment.body}</p>
+              <p key={i}>{comment.user.username}:{comment.body}</p>
             ))}
-
+            { photo.time }
             <img src={photo.url} />
           </li>))
         }
