@@ -9,7 +9,7 @@ export const addFollow = (following_id) => (
 export const deleteFollow = (followingInfo) => (
   $.ajax ({
     method: 'DELETE',
-    url: '/api/follows',
+    url: `api/follows/${followingInfo}`,
     data: { follow: followingInfo }
   })
 );

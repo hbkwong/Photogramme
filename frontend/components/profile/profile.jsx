@@ -23,7 +23,7 @@ class Profile extends React.Component {
   }
 
   handleUnfollow () {
-    // code
+    this.props.deleteFollow({follower_id: this.props.currentUser.id, following_id: this.props.info.id});
   }
 
   logoutAndRedirect () {
@@ -60,6 +60,7 @@ class Profile extends React.Component {
           <br />
           {this.state.info.username}
           <input type="button" value="Follow" onClick={this.handleFollow} />
+          <input type="button" value="Unfollow" onClick={this.handleUnfollow} />
           <input type="button" value="Log out" onClick={this.logoutAndRedirect} />
           <br />
           <div><b>{this.state.info.photos.length}</b> posts</div>
