@@ -51,6 +51,14 @@ class Profile extends React.Component {
     }
   }
 
+  logoutButton () {
+    return (
+      <button className="logout-button" onClick={this.logoutAndRedirect}>
+        Log out
+      </button>
+    );
+  }
+
   getFollowState() {
     if (this.props.followers.find((follower) => {
       return follower.id === this.props.currentUser.id;
@@ -94,13 +102,14 @@ class Profile extends React.Component {
 
           <br />
           {this.state.info.username}
-
+          <br />
           {this.followButton()}
-          <input type="button" value="Log out" onClick={this.logoutAndRedirect} />
+          <br />
+          {this.logoutButton()}
           <br />
           <div><b>{this.state.info.photos.length}</b> posts</div>
-          <div><b>280</b> followers</div>
-          <div><b>533</b> following</div>
+          <div>{this.props.followers.length} followers</div>
+          <div>{this.props.followings.length} following</div>
           {this.state.info.name}
           <br />
         </div>

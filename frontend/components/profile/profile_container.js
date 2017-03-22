@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     info: state.profile,
     currentUser: state.session.currentUser,
-    followers: _.values(state.profile.followers)
+    followers: _.values(state.profile.followers),
+    followings: _.values(state.profile.followings)
   };
 };
 
