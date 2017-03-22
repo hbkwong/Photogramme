@@ -12,9 +12,14 @@
 #
 
 class Photo < ApplicationRecord
-  has_many :likes
   has_many :commments
   belongs_to :user
+
+  has_many :likes
+
+  has_many :liking_users,
+    through: :likes,
+    source: :user
 
   validates :user, presence: true
   validates :url, presence: true
