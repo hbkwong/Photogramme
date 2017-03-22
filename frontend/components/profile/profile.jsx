@@ -11,6 +11,8 @@ class Profile extends React.Component {
         name: '',
         profile_photo_url: '',
         photos: []
+        // followers: [],
+        // followings: []
       }
     };
     this.logoutAndRedirect = this.logoutAndRedirect.bind(this);
@@ -85,6 +87,8 @@ class Profile extends React.Component {
         name: newProps.info.name,
         profile_photo_url: newProps.info.profile_photo_url,
         photos: newProps.info.photos
+        // followers: newProps.info.followers,
+        // followings: newProps.info.followings
       }
     });
   }
@@ -95,7 +99,6 @@ class Profile extends React.Component {
       <div className="profile-section">
 
         <div className="profile-all-info">
-
           <img
             src={this.state.info.profile_photo_url}
             className="profile-photo" />
@@ -114,15 +117,17 @@ class Profile extends React.Component {
           <br />
         </div>
 
-      <div className="profile-photos">
-        { this.state.info.photos.map((photo, idx) => (
-          <li key={idx}>
-            <img src={photo.url} />
-          </li>))
-        }
-      </div>
+        <div className="profile-photos">
+          <ul className="post-grid">
+            { this.state.info.photos.map((photo, idx) => (
+              <li key={idx} className="post-list-item">
+                <img src={photo.url} />
+              </li>))
+            }
+          </ul>
+        </div>
 
-    </div>
+      </div>
     );
   }
 }

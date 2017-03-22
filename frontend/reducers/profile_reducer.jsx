@@ -1,4 +1,5 @@
 import { RECEIVE_USER_INFO } from '../actions/profile_actions';
+import { RECEIVE_FOLLOW, REMOVE_FOLLOW } from '../actions/follow_actions';
 import merge from 'lodash/merge';
 
 const defaultUser = {
@@ -6,7 +7,8 @@ const defaultUser = {
   bio: '',
   email: '',
   name: '',
-  photos: []
+  photos: [],
+  followers: []
 };
 
 const profileReducer = (state = defaultUser, action) => {
