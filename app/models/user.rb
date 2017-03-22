@@ -17,8 +17,13 @@
 class User < ApplicationRecord
 
   has_many :photos
-  has_many :likes
   has_many :comments
+
+  has_many :likes
+
+  has_many :liked_photos,
+    through: :likes,
+    source: :photo
 
   # Gets the 'Follow' relationship objects
   # where the user is being followed
