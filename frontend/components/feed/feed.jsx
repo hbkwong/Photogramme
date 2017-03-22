@@ -34,6 +34,13 @@ class Feed extends React.Component {
         { this.props.photos.map((photo, idx) => (
           <li key={idx}>
             {photo.user.username}
+            <br />
+            Likes: {photo.likes.length}
+            <br />
+            { photo.comments.map((comment, i) => (
+              <p key={i}>{comment.user_id}:{comment.body}</p>
+            ))}
+
             <img src={photo.url} />
           </li>))
         }
