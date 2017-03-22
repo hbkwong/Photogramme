@@ -26,6 +26,41 @@ class Profile extends React.Component {
     this.props.deleteFollow({follower_id: this.props.currentUser.id, following_id: this.props.info.id});
   }
 
+  followButton () {
+    if (this.props.currentUser) {
+      if (this.props.currentUser.id === this.props.info.id) {
+        return (
+          <button>Edit Profile</button>
+        );
+      } else {
+        if (this.getFollowState() === "follow") {
+          return (
+            <button className="follow" onClick={this.handleFollow}>
+              Follow
+            </button>
+          );
+        } else {
+          return (
+            <button className="unfollow" onClick={this.handleUnfollow}>
+              Unfollow
+            </button>
+          );
+        }
+      }
+
+    }
+  }
+
+  getFollowState() {
+    if (this.props.followers.find((follower) => {
+      return follower.id === this.props.currentUser.id;
+    })) {
+      return 'unfollow';
+    } else {
+      return 'follow';
+    }
+  }
+
   logoutAndRedirect () {
     this.props.logout()
     .then(() => hashHistory.push('/'));
@@ -59,8 +94,8 @@ class Profile extends React.Component {
 
           <br />
           {this.state.info.username}
-          <input type="button" value="Follow" onClick={this.handleFollow} />
-          <input type="button" value="Unfollow" onClick={this.handleUnfollow} />
+
+          {this.followButton()}
           <input type="button" value="Log out" onClick={this.logoutAndRedirect} />
           <br />
           <div><b>{this.state.info.photos.length}</b> posts</div>

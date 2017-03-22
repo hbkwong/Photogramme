@@ -3,11 +3,13 @@ import { requestUserInfo } from '../../actions/profile_actions';
 import { logout } from '../../actions/session_actions';
 import { addFollow, deleteFollow } from '../../actions/follow_actions';
 import Profile from './profile';
+import _ from 'lodash';
 
 const mapStateToProps = (state, ownProps) => {
   return {
     info: state.profile,
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    followers: _.values(state.profile.followers)
   };
 };
 
