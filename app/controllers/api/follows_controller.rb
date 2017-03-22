@@ -14,7 +14,7 @@ class Api::FollowsController < ApplicationController
         following_followers: User.find(follow_params[:following_id]).followers
         }, status: 200
     else
-      render json: @photo.errors.full_messages, status: 422
+      render json: @follow.errors.full_messages, status: 422
     end
   end
 
@@ -32,7 +32,7 @@ class Api::FollowsController < ApplicationController
         following_followers: User.find(follow_params[:following_id]).followers
         }, status: 200
     else
-      render json: @photo.errors.full_messages, status: 422
+      render json: @follow.errors.full_messages, status: 422
     end
   end
 

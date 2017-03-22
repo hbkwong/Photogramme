@@ -14,6 +14,16 @@ class Profile extends React.Component {
       }
     };
     this.logoutAndRedirect = this.logoutAndRedirect.bind(this);
+    this.handleFollow = this.handleFollow.bind(this);
+    this.handleUnfollow = this.handleUnfollow.bind(this);
+  }
+
+  handleFollow () {
+    this.props.addFollow(this.props.info.id);
+  }
+
+  handleUnfollow () {
+    // code
   }
 
   logoutAndRedirect () {
@@ -37,6 +47,7 @@ class Profile extends React.Component {
   }
 
   render () {
+    console.log(this.props);
     return (
       <div className="profile-section">
 
@@ -48,7 +59,7 @@ class Profile extends React.Component {
 
           <br />
           {this.state.info.username}
-          <input type="button" value="Edit Profile/Follow" />
+          <input type="button" value="Follow" onClick={this.handleFollow} />
           <input type="button" value="Log out" onClick={this.logoutAndRedirect} />
           <br />
           <div><b>{this.state.info.photos.length}</b> posts</div>
