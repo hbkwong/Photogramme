@@ -33,20 +33,24 @@ class Feed extends React.Component {
       <div className="feed-photos">
         { this.props.photos.map((photo, idx) => (
           <li key={idx}>
-            {photo.user.username}
 
-            <br />
+            <div className="feed-profile-photo">
+              <img src={photo.user.profile_photo_url}></img>
+            </div>
+            <div className="feed-username">{photo.user.username}</div>
+            <div className="feed-location">{photo.location}</div>
+            <div className="feed-time">{photo.time}</div>
 
-            {photo.time}
+            <img className="feed-photo" src={photo.url} />
 
-            <img src={photo.url} />
+            <div className="feed-likes">{photo.likes.length} Likes</div>
 
-            <br />
-
-            {photo.likes.length} Likes
             { photo.comments.map((comment, i) => (
-              <p key={i}><b>{comment.user.username}</b> {comment.body}</p>
+              <li className="feed-comments" key={i}>
+                <b>{comment.user.username}</b> {comment.body}
+              </li>
             ))}
+
           </li>))
         }
       </div>
