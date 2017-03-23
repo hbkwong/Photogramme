@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { requestPhotos } from '../../actions/feed_actions';
+import { addLike, deleteLike } from '../../actions/like_actions';
 import Feed from './feed';
 import _ from 'lodash';
 
@@ -12,7 +13,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    requestPhotos: () => dispatch(requestPhotos())
+    requestPhotos: () => dispatch(requestPhotos()),
+    addLike: photoId => dispatch(addLike(photoId)),
+    deleteLike: photoId => dispatch(deleteLike(photoId))
   };
 };
 

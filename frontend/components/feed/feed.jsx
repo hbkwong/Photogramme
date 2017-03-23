@@ -12,6 +12,8 @@ class Feed extends React.Component {
       //   url: ''
       // }
     };
+    this.getLikeState = this.getLikeState.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
 
   componentDidMount() {
@@ -28,7 +30,28 @@ class Feed extends React.Component {
   //   });
   // }
 
+  handleLike (event) {
+    if (event.currentTarget.className === 'unliked-icon') {
+      this.props.addLike(event.currentTarget.id);
+    } else {
+      this.props.deleteLike(event.currentTarget.id);
+    }
+  }
+
+  getLikeState () {
+    // if (this.props.currentUser) {
+    //   if (this.props.photo.liking_users.find((user) => {
+    //     return user.username === this.props.currentUser.username;
+    //   })) {
+    //     return 'liked';
+    //   } else {
+    //     return 'unliked';
+    //   }
+    // }
+  }
+
   render () {
+    console.log(this.props);
     return (
       <section className="feed-photos">
         { this.props.photos.map((photo, idx) => (
@@ -66,10 +89,18 @@ class Feed extends React.Component {
             </div>
 
             <div className="feed-photo-footer">
-              <input
-                className="comment-input"
-                type="text"
-                placeholder="Add a comment..." />
+              <div className="feed-photo-footer-sub">
+                <button
+                  id={photo.id}
+                  className={this.getLikeState()+'-icon'}
+                  onClick={this.handleLike}/>
+
+                <input
+                  id={photo.id}
+                  className="comment-input"
+                  type="text"
+                  placeholder="Add a comment..." />
+              </div>
             </div>
 
             <div className="feed-spacer"></div>
