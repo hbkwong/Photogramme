@@ -42,6 +42,18 @@ class Feed extends React.Component {
     }
   }
 
+  likeButton (photo) {
+    if (this.getLikeState(photo) === 'liked') {
+      return (
+        <img src="http://res.cloudinary.com/instagramme/image/upload/v1490293554/heartred_kjvlav.png" />
+      );
+    } else {
+      return (
+        <img src="http://res.cloudinary.com/instagramme/image/upload/v1490293553/heartred-ConvertImage_hyqrd1.png" />
+      );
+    }
+  }
+
   getLikeState (photo) {
     if (this.props.currentUser) {
       if (photo.liking_users.find((user) => {
@@ -98,7 +110,7 @@ class Feed extends React.Component {
                   id={photo.id}
                   className={this.getLikeState(photo)+'-icon'}
                   onClick={this.handleLike}>
-                  Like/Unlike
+                  {this.likeButton(photo)}
                 </button>
 
                 <input
