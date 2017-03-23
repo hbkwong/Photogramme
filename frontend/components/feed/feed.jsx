@@ -30,11 +30,15 @@ class Feed extends React.Component {
   //   });
   // }
 
-  handleLike (event) {
-    if (event.currentTarget.className === 'unliked-icon') {
-      this.props.addLike(event.currentTarget.id);
+  handleLike (e) {
+    const photoId = parseInt(e.currentTarget.id);
+
+    if (e.currentTarget.className === 'liked-icon') {
+      this.props.deleteLike({
+        photo_id: photoId,
+        user_id: this.props.currentUser.id});
     } else {
-      this.props.deleteLike(event.currentTarget.id, this.props.currentUser.id);
+      this.props.addLike(photoId);
     }
   }
 
