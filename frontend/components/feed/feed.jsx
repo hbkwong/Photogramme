@@ -14,16 +14,6 @@ class Feed extends React.Component {
     this.props.requestPhotos();
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   this.setState({
-  //     photos: {
-  //       caption: newProps.photos.caption,
-  //       likes: newProps.photos.likes,
-  //       url: newProps.photos.url
-  //     }
-  //   });
-  // }
-
   handleLike (e) {
     const photoId = parseInt(e.currentTarget.id);
 
@@ -48,19 +38,22 @@ class Feed extends React.Component {
     }
   }
 
-  componentWillReceiveProps(newProps) {
-    if (this.props.photos.likes !== newProps.photos.likes) {
-      this.setState({
-        photos: newProps.photos
-      });
-    }
-
-  }
+  // componentWillReceiveProps(newProps) {
+  //   if (!Object.is(this.props.photos, newProps.photos)) {
+  //     this.setState({
+  //       photos: newProps.photos
+  //     });
+  //
+  //   } else {
+  //
+  //   }
+  //
+  // }
 
   getLikeState (photo) {
     if (this.props.currentUser) {
-      if (photo.liking_users.find((user) => {
-        return user.id === this.props.currentUser.id;
+      if (photo.likes.find((like) => {
+        return like.user_id === this.props.currentUser.id;
       })) {
         return 'liked';
       } else {
@@ -70,7 +63,7 @@ class Feed extends React.Component {
   }
 
   render () {
-    console.log(this.props);
+    // debugger;
     return (
       <section className="feed-photos">
         { this.props.photos.map((photo, idx) => (

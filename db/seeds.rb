@@ -174,3 +174,63 @@ Photo.create!(
   location: "Laguna Beach, CA",
   user_id: 1
 )
+
+Like.create!(
+  user_id: 1
+  photo_id: 1
+)
+
+Like.create!(
+  user_id: 1
+  photo_id: 2
+)
+
+Like.create!(
+  user_id: 1
+  photo_id: 3
+)
+
+Like.create!(
+  user_id: 1
+  photo_id: 4
+)
+
+Like.create!(
+  user_id: 1
+  photo_id: 5
+)
+
+Like.create!(
+  user_id: 1
+  photo_id: 1
+)
+
+Like.create!(
+  user_id: 2
+  photo_id: 1
+)
+
+Like.create!(
+  user_id: 3
+  photo_id: 1
+)
+
+Like.create!(
+  user_id: 4
+  photo_id: 1
+)
+
+Like.create!(
+  user_id: 1
+  photo_id: 2
+)
+
+Like.create!(
+  user_id: 2
+  photo_id: 2
+)
+
+Like.create!(
+  user_id: 3
+  photo_id: 2
+)
