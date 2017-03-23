@@ -1,12 +1,90 @@
 .feed-photos {
   justify-content: center;
   display: flex;
+  max-width: 600px;
   align-items: center;
   flex-direction: column;
-  margin: 0 auto;
+  border-radius: 5px;
   list-style-type: none;
+  border: 1px solid #efefef;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  background-color: #FFFFFF;
 }
 
 .feed-photo {
-  max-width: 600px;
+  background-color: #FFFFFF;
+}
+
+.feed-photo-header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #efefef;
+  background-color: #FFFFFF
+}
+
+.feed-username {
+  background-color: #FFFFFF
+}
+
+.feed-location {
+  background-color: #FFFFFF
+}
+
+.feed-user-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #FFFFFF
+}
+
+.feed-user-info img {
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  height: 30px;
+  margin-right: 10px;
+  border-bottom: 1px solid #efefef;
+  width: 30px;
+  object-fit: cover;
+}
+
+.feed-photo-header .number {
+  background-color: #FFFFFF;
+  color: #999;
+  font-weight: 400;
+}
+
+.feed-photo-comments {
+  padding-bottom: 15px;
+  background-color: #FFFFFF;
+  padding-top: 5px;
+}
+
+.feed-photo-info {
+  margin: 25px 25px 15px 25px;;
+  border-bottom: 1px solid #efefef;
+  background-color: #FFFFFF;
+}
+
+.feed-photo-footer {
+  margin: 0px 25px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.comment-input {
+  margin-left: 10px;
+  padding-top: 7px;
+  width: 500px;
+}
+
+.feed-likes {
+  background-color: #FFFFFF;
 }
