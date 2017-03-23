@@ -1,5 +1,6 @@
 import { RECEIVE_USER_INFO } from '../actions/profile_actions';
 import { RECEIVE_FOLLOW, REMOVE_FOLLOW } from '../actions/follow_actions';
+import { getIndex } from '../util/util';
 import merge from 'lodash/merge';
 
 const defaultUser = {
@@ -30,15 +31,10 @@ const profileReducer = (state = defaultUser, action) => {
       const newUser = Object.assign({}, state);
       newUser.followers.push(newFollower);
       return newUser;
-      // const newFollowers = state.profile.followers.slice();
-      // newFollowers.push(action.follow.follower);
-      // const newUser = Object.assign({}, state.profile, {followers: newFollowers});
-      // return Object.assign({}, state, {profile: newUser});
     case REMOVE_FOLLOW:
       const removeFollower = action.follow.follower;
       const newState = Object.assign({}, state);
-
-      delete newState[action.follow];
+      newState.followers = action.follow.following_followers;
       return newState;
     default:
       return state;
