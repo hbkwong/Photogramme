@@ -5,13 +5,7 @@ import { Link, withRouter } from 'react-router';
 class Feed extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      // photos: {
-      //   caption: '',
-      //   likes: [],
-      //   url: ''
-      // }
-    };
+    this.state = this.props;
     this.getLikeState = this.getLikeState.bind(this);
     this.handleLike = this.handleLike.bind(this);
   }
@@ -52,6 +46,15 @@ class Feed extends React.Component {
         <img src="http://res.cloudinary.com/instagramme/image/upload/v1490293553/heartred-ConvertImage_hyqrd1.png" />
       );
     }
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props.photos.likes !== newProps.photos.likes) {
+      this.setState({
+        photos: newProps.photos
+      });
+    }
+
   }
 
   getLikeState (photo) {
