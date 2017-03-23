@@ -72,6 +72,7 @@ class Feed extends React.Component {
                 placeholder="Add a comment..." />
             </div>
 
+            <div className="feed-spacer"></div>
           </li>))
         }
       </section>
