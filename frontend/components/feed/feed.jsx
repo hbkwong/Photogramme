@@ -34,20 +34,20 @@ class Feed extends React.Component {
     if (event.currentTarget.className === 'unliked-icon') {
       this.props.addLike(event.currentTarget.id);
     } else {
-      this.props.deleteLike(event.currentTarget.id);
+      this.props.deleteLike(event.currentTarget.id, this.props.currentUser.id);
     }
   }
 
-  getLikeState () {
-    // if (this.props.currentUser) {
-    //   if (this.props.photo.liking_users.find((user) => {
-    //     return user.username === this.props.currentUser.username;
-    //   })) {
-    //     return 'liked';
-    //   } else {
-    //     return 'unliked';
-    //   }
-    // }
+  getLikeState (photo) {
+    if (this.props.currentUser) {
+      if (photo.liking_users.find((user) => {
+        return user.id === this.props.currentUser.id;
+      })) {
+        return 'liked';
+      } else {
+        return 'unliked';
+      }
+    }
   }
 
   render () {
@@ -92,8 +92,10 @@ class Feed extends React.Component {
               <div className="feed-photo-footer-sub">
                 <button
                   id={photo.id}
-                  className={this.getLikeState()+'-icon'}
-                  onClick={this.handleLike}/>
+                  className={this.getLikeState(photo)+'-icon'}
+                  onClick={this.handleLike}>
+                  Like/Unlike
+                </button>
 
                 <input
                   id={photo.id}

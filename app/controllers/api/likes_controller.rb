@@ -20,7 +20,10 @@ class Api::LikesController < ApplicationController
 
   def destroy
     user = User.find_by(id: like_params[:user_id])
-    @like = Like.find_by(photo_id: like_params[:photo_id], user: user)
+    @like = Like.find_by(
+      photo_id: like_params[:photo_id],
+      user_id: like_params[:user_id]
+    )
 
     if @like.destroy
       render json: {

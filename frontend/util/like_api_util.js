@@ -6,10 +6,10 @@ export const addLike = photoId => (
   })
 );
 
-export const deleteLike = (photoId, username) => (
+export const deleteLike = (photoId, userId) => (
   $.ajax ({
     method: 'DELETE',
     url: `/api/likes/${photoId}`,
-    data: { like: { photo_id: photoId, username } }
+    data: { like: { photo_id: photoId, userId } }
   })
 );
