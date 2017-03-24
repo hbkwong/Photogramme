@@ -113,15 +113,15 @@ class Profile extends React.Component {
           {this.logoutButton()}
 
           <div className="profile-photo-number">
-            <b>{this.state.info.photos.length}</b> posts
+            <b>{this.state.info.photos.length >= 1 ? this.state.info.photos.length : 0}</b> posts
           </div>
 
-          <div className="profile-followers-number">{
-              this.props.followers.length} followers
+          <div className="profile-followers-number">
+            <b>{this.props.followers.length}</b> followers
           </div>
 
           <div className="profile-followings-number">
-            {this.props.followings.length} following
+            <b>{this.props.followings.length}</b> following
           </div>
 
           <div className="profile-name">

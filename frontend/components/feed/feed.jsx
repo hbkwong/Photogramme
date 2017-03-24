@@ -102,7 +102,7 @@ class Feed extends React.Component {
             </div>
             <div className="feed-photo-info">
               <div className="feed-likes">
-                {photo.likes.length} Likes
+                {photo.likes.length} {photo.likes.length === 1 ? "Like" : "Likes"}
               </div>
               <div className="feed-caption">
                 <b>{photo.user.username}</b> {photo.caption}

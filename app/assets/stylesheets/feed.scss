@@ -37,6 +37,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 16px 16px;
+  padding-bottom: 50px;
   box-sizing: border-box;
   border-bottom: 1px solid #efefef;
   border-top: 1px solid #efefef;
@@ -120,7 +121,7 @@
   border-left: 1px solid $light-gray;
   border-right: 1px solid $light-gray;
   border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
+  // border-bottom: 1px solid #efefef;
 }
 
 .feed-spacer-top {
