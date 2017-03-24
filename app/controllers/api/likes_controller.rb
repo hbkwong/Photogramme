@@ -24,7 +24,7 @@ class Api::LikesController < ApplicationController
       photo_id: like_params[:photo_id],
       user_id: like_params[:user_id]
     )
-
+    # @like = Like.find(params[:id])
     if @like.destroy
       render json: {
         id: @like.id,

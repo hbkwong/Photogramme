@@ -13,7 +13,7 @@ const feedReducer = (state = {}, action) => {
     case RECEIVE_PHOTOS:
       return merge({}, action.photos);
     case RECEIVE_LIKE:
-      debugger;
+      // debugger;
       const newLike = action.like;
       const newState = Object.assign({}, state);
       newState[action.like.photo.id].likes.push(newLike);
