@@ -82,7 +82,6 @@ class Feed extends React.Component {
   }
 
   render () {
-    // debugger;
     return (
       <section className="feed-photos">
         { this.props.photos.map((photo, idx) => (
@@ -103,6 +102,9 @@ class Feed extends React.Component {
             <div className="feed-photo-info">
               <div className="feed-likes">
                 {photo.likes.length} Likes
+              </div>
+              <div className="feed-caption">
+                <b>{photo.user.username}</b> {photo.caption}
               </div>
               <div className="feed-photo-comments">
                 { photo.comments.map((comment, i) => (

@@ -175,62 +175,146 @@ Photo.create!(
   user_id: 1
 )
 
+
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342372/ryan-wilson-6626_uerlzl.jpg",
+  caption: "Serenity!",
+  location: "Ireland",
+  user_id: 2
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/henrique-felix-113546_xz6fq2.jpg",
+  caption: "Bon appetit 🍽",
+  location: "Cafe Algiers",
+  user_id: 2
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/scott-walsh-141934_sajf2y.jpg",
+  caption: "Concrete jungle where dreams are made of.",
+  location: "New York, NY",
+  user_id: 2
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/arnaud-mesureur-132213_s30pbd.jpg",
+  caption: "Surfin' USA.",
+  location: "Zuma Beach, CA",
+  user_id: 2
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/felix-russell-saw-190802_sysui4.jpg",
+  caption: "What a view!",
+  location: "Monterey, CA",
+  user_id: 3
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342381/jason-blackeye-217162_xixmus.jpg",
+  caption: "Such great heights.",
+  location: "Scotland",
+  user_id: 3
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342377/denin-williams-690_ro4ufh.jpg",
+  caption: "Don't worry; be happy.",
+  location: "Carmel, CA",
+  user_id: 3
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342381/jakob-owens-205635_hcr8bm.jpg",
+  caption: "Lens to the world",
+  location: "Woodland Hills, CA",
+  user_id: 4
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342383/dave-lastovskiy-127581_lgwzgq.jpg",
+  caption: "A wonderful Saturday evening",
+  location: "Malibu, CA",
+  user_id: 5
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342383/joshua-earle-133254_tjyqqg.jpg",
+  caption: "Gorgeous sunset!",
+  location: "Lands End, San Francisco",
+  user_id: 5
+)
+
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 1
 )
 
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 2
 )
 
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 3
 )
 
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 4
 )
 
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 5
 )
 
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 1
 )
 
 Like.create!(
-  user_id: 2
+  user_id: 2,
   photo_id: 1
 )
 
 Like.create!(
-  user_id: 3
+  user_id: 3,
   photo_id: 1
 )
 
 Like.create!(
-  user_id: 4
+  user_id: 4,
   photo_id: 1
 )
 
 Like.create!(
-  user_id: 1
+  user_id: 1,
   photo_id: 2
 )
 
 Like.create!(
-  user_id: 2
+  user_id: 2,
   photo_id: 2
 )
 
 Like.create!(
-  user_id: 3
+  user_id: 3,
   photo_id: 2
+)
+
+Comment.create!(
+  photo_id: 1,
+  user_id: 1,
+  body: "So cool!"
+)
+
+Comment.create!(
+  photo_id: 2,
+  user_id: 1,
+  body: "Looks great!"
 )
