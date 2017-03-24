@@ -36,9 +36,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 16px 15px;
+  padding: 16px 16px;
   box-sizing: border-box;
   border-bottom: 1px solid #efefef;
+  border-top: 1px solid #efefef;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
   background-color: #FFFFFF
 }
 
@@ -114,6 +117,17 @@
   width: 600px;
   padding-bottom: 90px;
   background-color: $light-gray;
-  border-left: none;
-  border-right: none;
+  border-left: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+.feed-spacer-top {
+  width: 600px;
+  padding-bottom: 90px;
+  background-color: $light-gray;
+  border-left: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
 }

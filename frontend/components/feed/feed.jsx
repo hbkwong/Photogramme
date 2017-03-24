@@ -84,7 +84,7 @@ class Feed extends React.Component {
   render () {
     return (
       <section className="feed-photos">
-        <div className="feed-spacer"></div>
+        <div className="feed-spacer-top"></div>
         { this.props.photos.map((photo, idx) => (
           <li className="feed-post" key={idx}>
             <div className="feed-photo-header">
