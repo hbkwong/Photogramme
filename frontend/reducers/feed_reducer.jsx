@@ -24,8 +24,11 @@ const feedReducer = (state = {}, action) => {
       nextState[action.like.photo.id].likes.splice(likeIndex, 1);
       return nextState;
     case RECEIVE_COMMENT:
-      // code
-      return;
+      debugger;
+      const comment = action.comment;
+      const stateDup = Object.assign({}, state);
+      stateDup[action.comment.photo.id].comments.push(comment);
+      return stateDup;
     case REMOVE_COMMENT:
       // code
       return;
