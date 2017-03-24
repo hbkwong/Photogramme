@@ -19,16 +19,16 @@ const feedReducer = (state = {}, action) => {
       newState[action.like.photo.id].liking_users.push(newLike.user_id);
       return newState;
     case REMOVE_LIKE:
-      debugger;
       const removeLike = action.like;
       const nextState = Object.assign({}, state);
-      return nextState;
+      debugger;
+      delete nextState[action.like.photo.id].likes.find((like) => (like.user_id === action.like.currentUser.id));
+
+      // return;
 
       // let nextState = merge({}, state);
       // delete nextState[action.like.id];
-      // return nextState;
-
-      return;
+      return nextState;
     default:
       return state;
   }

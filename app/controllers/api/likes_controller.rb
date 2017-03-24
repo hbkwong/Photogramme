@@ -24,7 +24,8 @@ class Api::LikesController < ApplicationController
       render json: {
         id: @like.id,
         user: @like.user,
-        photo: @like.photo
+        photo: @like.photo,
+        currentUser: current_user
         # photo_id: like_params[:photo_id]
         # photo_id: like_params[:post_id],
         # photo: Photo.find(like_params[:photo_id]),
