@@ -13,12 +13,12 @@ export const removeComment = comment => ({
   comment
 });
 
-export const addComment = commentInfo => dispatch => (
-  APIUtil.addComment(commentInfo)
-  .then(comment => dispatch(receiveComment(comment)))
+export const addComment = comment => dispatch => (
+  APIUtil.addComment(comment)
+  .then(commented => dispatch(receiveComment(commented)))
 );
 
-export const deleteComment = id => dispatch => (
-  APIUtil.deleteComment(id)
+export const deleteComment = (photoId, commentId) => dispatch => (
+  APIUtil.deleteComment(photoId, commentId)
   .then(comment => dispatch(removeComment(comment)))
 );

@@ -6,11 +6,11 @@ class Api::CommentsController < ApplicationController
     if @comment.save
       render json: {
         id: @comment.id,
-        photo: Photo.find(comment_params[:photo_id]),
-        photo_id: comment_params[:photo_id],
-        user: current_user,
-        user_id: current_user.id,
-        body: @commment.body
+        photo: @comment.photo,
+        # photo_id: comment_params[:photo_id],
+        user: @comment.user,
+        # user_id: current_user.id,
+        body: @comment.body
       }, status: 200
     else
       render json: @comment.errors.full_messages, status: 422

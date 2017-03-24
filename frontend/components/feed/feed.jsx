@@ -125,6 +125,7 @@ class Feed extends React.Component {
                   id={photo.id}
                   type="text"
                   placeholder="Add a comment..."
+                  value={this.state.body}
                   onChange={this.update('body')}
                   onKeyDown={this.commentEnter} />
               </div>
