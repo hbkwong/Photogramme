@@ -142,7 +142,7 @@ Photo.delete_all
 
 Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490028608/k7tvoxieu0ca5vqcqvvg.jpg",
-  caption: "Old school cool",
+  caption: "Old school cool 😎",
   location: "San Francisco, CA",
   user_id: 1
 )
@@ -310,11 +310,11 @@ Like.create!(
 Comment.create!(
   photo_id: 1,
   user_id: 1,
-  body: "So cool!"
+  body: "So cool! 😎"
 )
 
 Comment.create!(
   photo_id: 2,
   user_id: 1,
-  body: "Looks great!"
+  body: "Looks great! 😄"
 )

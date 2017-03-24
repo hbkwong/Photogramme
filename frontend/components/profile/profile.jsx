@@ -95,25 +95,38 @@ class Profile extends React.Component {
 
   render () {
     return (
-      <div className="profile-section">
+      <section className="profile-section">
 
-        <div className="profile-all-info">
+        <div className="profile-header">
           <img
             src={this.state.info.profile_photo_url}
             className="profile-photo" />
 
-          <br />
-          {this.state.info.username}
-          <br />
-          {this.followButton()}
-          <br />
+          <div className="profile-username">
+            {this.state.info.username}
+          </div>
+
+          <div className="profile-follow-button">
+            {this.followButton()}
+          </div>
+
           {this.logoutButton()}
-          <br />
-          <div><b>{this.state.info.photos.length}</b> posts</div>
-          <div>{this.props.followers.length} followers</div>
-          <div>{this.props.followings.length} following</div>
-          {this.state.info.name}
-          <br />
+
+          <div className="profile-photo-number">
+            <b>{this.state.info.photos.length}</b> posts
+          </div>
+
+          <div className="profile-followers-number">{
+              this.props.followers.length} followers
+          </div>
+
+          <div className="profile-followings-number">
+            {this.props.followings.length} following
+          </div>
+
+          <div className="profile-name">
+            {this.state.info.name}
+          </div>
         </div>
 
         <div className="profile-photos">
@@ -126,7 +139,7 @@ class Profile extends React.Component {
           </ul>
         </div>
 
-      </div>
+      </section>
     );
   }
 }
