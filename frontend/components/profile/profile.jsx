@@ -97,7 +97,7 @@ class Profile extends React.Component {
               </div>
             </div>
 
-            <ul className="profile-stats">
+            <ul className="profile-statistics">
               <li>
                 <b>
                   {this.state.info.photos ? this.state.info.photos.length : 0}

@@ -1,10 +1,12 @@
 .profile-photo {
-  width: auto;
-  height: auto;
-  max-width:230px;
-  max-height:230px;
-  display: block;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  margin-left: 70px;
+  margin-right: 100px;
+  border: 1px solid #dbdbdb;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .post-grid {
@@ -50,4 +52,42 @@
 
 .profile-section {
   margin-bottom: 30px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-information {
+  width: 610px;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile-statistics {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0 15px 0;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  list-style: none;
+}
+
+.profile-details {
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.profile-statistics li b {
+  font-size: 16px;
+}
+
+.profile-statistics li {
+  padding-right: 40px;
+
 }
