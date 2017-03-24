@@ -5,13 +5,33 @@ import { Link, withRouter } from 'react-router';
 class Feed extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props;
+    this.state = {
+      body: ''
+    };
     this.getLikeState = this.getLikeState.bind(this);
     this.handleLike = this.handleLike.bind(this);
+    this.update = this.update.bind(this);
+    this.commentEnter = this.commentEnter.bind(this);
   }
 
   componentDidMount() {
     this.props.requestPhotos();
+  }
+
+  update (field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  commentEnter (event) {
+    if (event.keyCode === 13) {
+      const formData = new FormData();
+      formData.append('comment[photo_id]', event.currentTarget.id);
+      formData.append('comment[body]', this.state.body);
+      this.props.addComment(formData);
+      this.setState({ body: '' });
+    }
   }
 
   handleLike (e) {
@@ -101,10 +121,12 @@ class Feed extends React.Component {
                   {this.likeButton(photo)}
                 </button>
                 <input
-                  id={photo.id}
                   className="comment-input"
+                  id={photo.id}
                   type="text"
-                  placeholder="Add a comment..." />
+                  placeholder="Add a comment..."
+                  onChange={this.update('body')}
+                  onKeyDown={this.commentEnter} />
               </div>
             </div>
             <div className="feed-spacer"></div>
