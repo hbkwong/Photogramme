@@ -90,7 +90,9 @@ class Profile extends React.Component {
           <div className="profile-information">
 
             <div className="profile-title">
-              <h3>{this.state.info.username}</h3>
+              <h3 className="profile-username">
+                {this.state.info.username}
+              </h3>
 
               <div className="profile-follow-button">
                 {this.followButton()}
@@ -99,21 +101,21 @@ class Profile extends React.Component {
 
             <ul className="profile-statistics">
               <li>
-                <b>
+                <strong>
                   {this.state.info.photos ? this.state.info.photos.length : 0}
-                </b> posts
+                </strong> posts
               </li>
 
               <li>
-                <b>
+                <strong>
                   {this.props.followers ? this.props.followers.length : 0}
-                </b> followers
+                </strong> followers
               </li>
 
               <li>
-                <b>
+                <strong>
                   {this.props.followings ? this.props.followings.length : 0}
-                </b> following
+                </strong> following
               </li>
             </ul>
 

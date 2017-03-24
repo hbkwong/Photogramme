@@ -52,11 +52,14 @@
 
 .profile-section {
   margin-bottom: 30px;
+  align-items: center;
+  // justify-content: center;
 }
 
 .profile-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-information {
@@ -90,4 +93,10 @@
 .profile-statistics li {
   padding-right: 40px;
 
+}
+
+.profile-username {
+  font-size: 36px;
+  font-weight: 300;
+  font-family: 'Nunito', sans-serif;
 }
