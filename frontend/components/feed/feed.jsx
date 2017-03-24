@@ -18,9 +18,7 @@ class Feed extends React.Component {
     const photoId = parseInt(e.currentTarget.id);
 
     if (e.currentTarget.className === 'liked-icon') {
-      this.props.deleteLike({
-        photo_id: photoId,
-        user_id: this.props.currentUser.id});
+      this.props.deleteLike(photoId);
     } else {
       this.props.addLike(photoId);
     }

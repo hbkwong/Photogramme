@@ -18,7 +18,7 @@ export const addLike = photoId => dispatch => (
   .then(like => dispatch(receiveLike(like)))
 );
 
-export const deleteLike = (like) => dispatch => (
-  APIUtil.deleteLike(like)
+export const deleteLike = (id) => dispatch => (
+  APIUtil.deleteLike(id)
   .then(liked => dispatch(removeLike(liked)))
 );
