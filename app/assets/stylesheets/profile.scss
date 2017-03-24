@@ -12,6 +12,8 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  max-width: 1000px;
+
 }
 
 // .post-grid a {
@@ -27,14 +29,12 @@
   width: 290px;
 }
 
-.post-grid :nth-of-type(3n+1) {padding-right:2%;}
-.post-grid :nth-of-type(3n+2) {padding:0 1%;}
-.post-grid :nth-of-type(3n+3) {padding-left:2%;}
 
 .post-list-item  img {
   height: 290px;
   width: 290px;
   object-fit: cover;
+  padding: 20px;
 }
 
 .post-list-item li {
@@ -43,6 +43,7 @@
 }
 
 .profile-photos {
-
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
