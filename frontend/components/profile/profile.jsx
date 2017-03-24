@@ -10,10 +10,10 @@ class Profile extends React.Component {
         username: '',
         name: '',
         profile_photo_url: '',
-        photos: []
+        photos: [],
+        bio: ''
       }
     };
-    this.logoutAndRedirect = this.logoutAndRedirect.bind(this);
     this.handleFollow = this.handleFollow.bind(this);
     this.handleUnfollow = this.handleUnfollow.bind(this);
   }
@@ -51,14 +51,6 @@ class Profile extends React.Component {
     }
   }
 
-  logoutButton () {
-    return (
-      <button className="logout-button" onClick={this.logoutAndRedirect}>
-        Log out
-      </button>
-    );
-  }
-
   getFollowState() {
     if (this.props.followers.find((follower) => {
       return follower.id === this.props.currentUser.id;
@@ -67,11 +59,6 @@ class Profile extends React.Component {
     } else {
       return 'follow';
     }
-  }
-
-  logoutAndRedirect () {
-    this.props.logout()
-    .then(() => hashHistory.push('/'));
   }
 
   componentDidMount() {
@@ -84,7 +71,8 @@ class Profile extends React.Component {
         username: newProps.info.username,
         name: newProps.info.name,
         profile_photo_url: newProps.info.profile_photo_url,
-        photos: newProps.info.photos
+        photos: newProps.info.photos,
+        bio: newProps.info.bio
         // followers: newProps.info.followers,
         // followings: newProps.info.followings
       }
@@ -94,48 +82,58 @@ class Profile extends React.Component {
   render () {
     return (
       <section className="profile-section">
-
-        <div className="profile-header">
+        <header className="profile-header">
           <img
             src={this.state.info.profile_photo_url}
             className="profile-photo" />
 
-          <div className="profile-username">
-            {this.state.info.username}
-          </div>
+          <div className="profile-information">
 
-          <div className="profile-follow-button">
-            {this.followButton()}
-          </div>
+            <div className="profile-title">
+              <h3>{this.state.info.username}</h3>
 
-          {this.logoutButton()}
+              <div className="profile-follow-button">
+                {this.followButton()}
+              </div>
+            </div>
 
-          <div className="profile-photo-number">
-            <b>{this.state.info.photos ? this.state.info.photos.length : 0}</b> posts
-          </div>
+            <ul className="profile-stats">
+              <li>
+                <b>
+                  {this.state.info.photos ? this.state.info.photos.length : 0}
+                </b> posts
+              </li>
 
-          <div className="profile-followers-number">
-            <b>{this.props.followers ? this.props.followers.length : 0}</b> followers
-          </div>
+              <li>
+                <b>
+                  {this.props.followers ? this.props.followers.length : 0}
+                </b> followers
+              </li>
 
-          <div className="profile-followings-number">
-            <b>{this.props.followings ? this.props.followings.length : 0}</b> following
-          </div>
+              <li>
+                <b>
+                  {this.props.followings ? this.props.followings.length : 0}
+                </b> following
+              </li>
+            </ul>
 
-          <div className="profile-name">
-            {this.state.info.name}
-          </div>
+          <p className="profile-details">
+            <b>{this.state.info.name}</b>
+            {this.state.info.bio}
+          </p>
         </div>
 
-        <div className="profile-photos">
-          <ul className="post-grid">
-            { this.state.info.photos.map((photo, idx) => (
-              <li key={idx} className="post-list-item">
-                <img src={photo.url} />
-              </li>))
-            }
-          </ul>
-        </div>
+      </header>
+
+      <section className="profile-photos">
+        <ul className="post-grid">
+          { this.state.info.photos.map((photo, idx) => (
+            <li key={idx} className="post-list-item">
+              <img src={photo.url} />
+            </li>))
+          }
+        </ul>
+      </section>
 
       </section>
     );
