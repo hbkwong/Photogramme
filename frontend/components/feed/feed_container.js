@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     requestPhotos: () => dispatch(requestPhotos()),
     addLike: photoId => dispatch(addLike(photoId)),
-    deleteLike: (like) => dispatch(deleteLike(like))
+    deleteLike: (id) => dispatch(deleteLike(id))
   };
 };
 
