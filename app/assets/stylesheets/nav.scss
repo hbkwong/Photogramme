@@ -3,12 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid $blue;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
 .nav-logo {
+  padding-left: 180px;
   width: 30px;
   background: #FFFFFF;
   font-family: 'Cookie', cursive;
@@ -40,6 +41,7 @@
 
 .nav-icons {
   background: #FFFFFF;
+  padding-right: 180px;
 }
 
 .nav-profile-link {
