@@ -107,9 +107,13 @@ class SessionForm extends React.Component {
   render () {
     return (
       <div className='auth-section'>
+        <div className="auth-img">
+          <img src="http://res.cloudinary.com/instagramme/image/upload/v1490390317/instagram-icon-blue-v2_mmlrmr.svg"/>
+        </div>
         <div className='auth-form'>
           <form onSubmit={this.handleSubmit} className='box'>
             <div className='form-header'>Instagramme</div>
+            <div className='form-description'>See and share photos with friends!</div>
             <br />
             {this.renderErrors()}
 
