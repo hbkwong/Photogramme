@@ -66,29 +66,23 @@ class Feed extends React.Component {
       <section className="feed-photos">
         { this.props.photos.map((photo, idx) => (
           <li className="feed-post" key={idx}>
-
             <div className="feed-photo-header">
               <div className="feed-user-info">
                 <img src={photo.user.profile_photo_url} />
-
                 <div className="username-and-location">
                   <div className="feed-username">{photo.user.username}</div>
                   <div className="feed-location">{photo.location}</div>
                 </div>
-
               </div>
               <div className="number">{photo.time}</div>
             </div>
-
             <div className="feed-photo">
               <img src={photo.url} />
             </div>
-
             <div className="feed-photo-info">
               <div className="feed-likes">
                 {photo.likes.length} Likes
               </div>
-
               <div className="feed-photo-comments">
                 { photo.comments.map((comment, i) => (
                   <li className="feed-comments" key={i}>
@@ -97,7 +91,6 @@ class Feed extends React.Component {
                 ))}
               </div>
             </div>
-
             <div className="feed-photo-footer">
               <div className="feed-photo-footer-sub">
                 <button
@@ -106,7 +99,6 @@ class Feed extends React.Component {
                   onClick={this.handleLike}>
                   {this.likeButton(photo)}
                 </button>
-
                 <input
                   id={photo.id}
                   className="comment-input"
@@ -114,7 +106,6 @@ class Feed extends React.Component {
                   placeholder="Add a comment..." />
               </div>
             </div>
-
             <div className="feed-spacer"></div>
           </li>))
         }
