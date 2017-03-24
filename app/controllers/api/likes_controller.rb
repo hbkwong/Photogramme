@@ -8,7 +8,7 @@ class Api::LikesController < ApplicationController
     if @like.save
       render json: {
         id: @like.id,
-        photo_id: like_params[:post_id],
+        photo_id: like_params[:photo_id],
         photo: Photo.find(like_params[:photo_id]),
         user_id: current_user.id,
         user: current_user
@@ -22,7 +22,10 @@ class Api::LikesController < ApplicationController
     @like = Like.find_by(photo_id: params[:id], user_id: current_user.id)
     if @like.destroy
       render json: {
-        id: @like.id
+        id: @like.id,
+        user: @like.user,
+        photo: @like.photo
+        # photo_id: like_params[:photo_id]
         # photo_id: like_params[:post_id],
         # photo: Photo.find(like_params[:photo_id]),
         # user_id: current_user.id,
