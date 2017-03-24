@@ -30,7 +30,7 @@ class Profile extends React.Component {
     if (this.props.currentUser) {
       if (this.props.currentUser.id === this.props.info.id) {
         return (
-          <button>Edit Profile</button>
+          <div> </div>
         );
       } else {
         if (this.getFollowState() === "follow") {
@@ -120,8 +120,10 @@ class Profile extends React.Component {
             </ul>
 
           <p className="profile-details">
-            <b>{this.state.info.name}</b>
-            {this.state.info.bio}
+            <strong className="profile-name">
+              {this.state.info.name}
+            </strong>
+            {" " + this.state.info.bio}
           </p>
         </div>
 

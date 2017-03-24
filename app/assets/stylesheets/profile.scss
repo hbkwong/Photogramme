@@ -10,7 +10,7 @@
 }
 
 .post-grid {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -51,6 +51,7 @@
 }
 
 .profile-section {
+  margin-top: 40px;
   margin-bottom: 30px;
   align-items: center;
   // justify-content: center;
@@ -70,6 +71,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  max-height: 90px;
 }
 
 .profile-statistics {
@@ -99,4 +101,26 @@
   font-size: 36px;
   font-weight: 300;
   font-family: 'Nunito', sans-serif;
+}
+
+.profile-name {
+  font-size: 20px;
+}
+
+.follow {
+  margin-left: 20px;
+  border: 1px solid $blue;
+  box-sizing: border-box;
+  color: $blue;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.unfollow {
+  margin-left: 20px;
+  border: 1px solid $blue;
+  box-sizing: border-box;
+  color: $blue;
+  padding: 8px;
+  border-radius: 5px;
 }
