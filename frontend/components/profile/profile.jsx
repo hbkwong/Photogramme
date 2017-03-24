@@ -11,8 +11,6 @@ class Profile extends React.Component {
         name: '',
         profile_photo_url: '',
         photos: []
-        // followers: [],
-        // followings: []
       }
     };
     this.logoutAndRedirect = this.logoutAndRedirect.bind(this);
@@ -113,15 +111,15 @@ class Profile extends React.Component {
           {this.logoutButton()}
 
           <div className="profile-photo-number">
-            <b>{this.state.info.photos.length >= 1 ? this.state.info.photos.length : 0}</b> posts
+            <b>{this.state.info.photos ? this.state.info.photos.length : 0}</b> posts
           </div>
 
           <div className="profile-followers-number">
-            <b>{this.props.followers.length}</b> followers
+            <b>{this.props.followers ? this.props.followers.length : 0}</b> followers
           </div>
 
           <div className="profile-followings-number">
-            <b>{this.props.followings.length}</b> following
+            <b>{this.props.followings ? this.props.followings.length : 0}</b> following
           </div>
 
           <div className="profile-name">

@@ -85,7 +85,7 @@ class Feed extends React.Component {
     return (
       <section className="feed-photos">
         <div className="feed-spacer-top"></div>
-        { this.props.photos.map((photo, idx) => (
+        { this.props.photos.slice(0).reverse().map((photo, idx) => (
           <li className="feed-post" key={idx}>
             <div className="feed-photo-header">
               <div className="feed-user-info">
