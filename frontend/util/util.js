@@ -1,7 +1,7 @@
-export const getIndex = (arr, id) => {
+export const getIndex = (arr, obj) => {
   let ind;
   arr.forEach((el, index) => {
-    if (el.id === id) {
+    if (el.id === obj.id) {
       ind = index;
     }
   });

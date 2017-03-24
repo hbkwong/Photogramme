@@ -49,6 +49,7 @@ class Feed extends React.Component {
   // }
 
   getLikeState (photo) {
+    // debugger;
     if (this.props.currentUser) {
       if (photo.likes.find((like) => {
         return like.user_id === this.props.currentUser.id;
