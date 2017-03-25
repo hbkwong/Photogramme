@@ -56,18 +56,6 @@ class Feed extends React.Component {
     }
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   if (!Object.is(this.props.photos, newProps.photos)) {
-  //     this.setState({
-  //       photos: newProps.photos
-  //     });
-  //
-  //   } else {
-  //
-  //   }
-  //
-  // }
-
   getLikeState (photo) {
     // debugger;
     if (this.props.currentUser) {
@@ -91,7 +79,9 @@ class Feed extends React.Component {
               <div className="feed-user-info">
                 <img src={photo.user.profile_photo_url} />
                 <div className="username-and-location">
-                  <div className="feed-username">{photo.user.username}</div>
+                  <Link className="feed-username" to={`/${photo.user.id}`}>
+                    {photo.user.username}
+                  </Link>
                   <div className="feed-location">{photo.location}</div>
                 </div>
               </div>
