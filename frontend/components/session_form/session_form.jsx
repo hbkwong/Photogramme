@@ -91,13 +91,13 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return (
         <div className='box'>
-          Don't have an account? <Link to="/signup">Sign up</Link>
+          Don't have an account? <Link to="/signup"><strong>Sign up</strong></Link>
         </div>
       );
     } else {
       return (
         <div className='box'>
-          Have an account? <Link to="/login">Log in</Link>
+          Have an account? <Link to="/login"><strong>Log in</strong></Link>
         </div>
 
       );
@@ -106,55 +106,55 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <div className='auth-section'>
-        <div className="auth-img">
-          <img src="http://res.cloudinary.com/instagramme/image/upload/v1490390317/instagram-icon-blue-v2_mmlrmr.svg"/>
-        </div>
-        <div className='auth-form'>
-          <form onSubmit={this.handleSubmit} className='box'>
-            <div className='form-header'>Instagramme</div>
-            <div className='form-description'>See and share photos with friends!</div>
-            <br />
-            {this.renderErrors()}
-
-            <div className='login-form'>
-              {this.renderSignUp()}
-              <label>
-                <input
-                  placeholder="Username"
-                  type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className='login-input' />
-              </label>
+      <section className='entire-auth'>
+        <img className='auth-img' src="http://res.cloudinary.com/instagramme/image/upload/v1490390317/instagram-icon-blue-v2_mmlrmr.svg"/>
+        <div className='auth-section'>
+          <div className='auth-form'>
+            <form onSubmit={this.handleSubmit} className='box'>
+              <div className='form-header'>Instagramme</div>
+              <div className='form-description'>See and share photos with friends!</div>
               <br />
+              {this.renderErrors()}
+
+              <div className='login-form'>
+                {this.renderSignUp()}
                 <label>
                   <input
-                    placeholder="Password"
-                    type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
+                    placeholder="Username"
+                    type="text"
+                    value={this.state.username}
+                    onChange={this.update('username')}
                     className='login-input' />
                 </label>
                 <br />
-                <input
-                  className='button'
-                  type="submit"
-                  value="Submit" />
-                <br />
-                <input
-                  className='button'
-                  type="button"
-                  value="Guest Login"
-                  onClick={this.loginGuest} />
-            </div>
+                  <label>
+                    <input
+                      placeholder="Password"
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className='login-input' />
+                  </label>
+                  <br />
+                  <input
+                    className='button'
+                    type="submit"
+                    value="Submit" />
+                  <br />
+                  <input
+                    className='button'
+                    type="button"
+                    value="Guest Login"
+                    onClick={this.loginGuest} />
+              </div>
 
-          </form>
+            </form>
 
-        </div>
+            {this.navLink()}
+          </div>
 
-       {this.navLink()}
-     </div>
+       </div>
+     </section>
     );
   }
 }
