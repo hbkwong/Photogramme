@@ -1,10 +1,13 @@
 class Api::PhotosController < ApplicationController
   def index
-    # user = User.find_by(username: params[:username])
-    # @photos = Photo.where(user_id: user.id)
-    # # render 'api/photos/index'
-    # render json: @photos
-    @photos = Photo.all
+    if current_user
+      users_arr = [current_user]
+      current_user.followings.each do |following|
+        users_arr << following
+      end
+      @user = current_user
+      @photos = Photo.where(user: users_arr).order(created_at: :desc)
+    end
   end
 
   def create
