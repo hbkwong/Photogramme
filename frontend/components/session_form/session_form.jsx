@@ -106,51 +106,56 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <section className='entire-auth'>
-        <img className='auth-img' src="http://res.cloudinary.com/instagramme/image/upload/v1490390317/instagram-icon-blue-v2_mmlrmr.svg"/>
+      <section>
+        <div className='auth-main'>
+          <img className='auth-img' src="http://res.cloudinary.com/instagramme/image/upload/v1490390317/instagram-icon-blue-v2_mmlrmr.svg"/>
 
-        <div className='auth-section'>
-          <div className='auth-form'>
-            <form onSubmit={this.handleSubmit} className='box'>
-              <div className='form-header'>Instagramme</div>
-              <div className='form-description'>See and share photos with friends!</div>
-              <br />
-              {this.renderErrors()}
-
-              <div className='login-form'>
-                {this.renderSignUp()}
-                <label>
-                  <input
-                    placeholder="Username"
-                    type="text"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    className='login-input' />
-                </label>
+          <div className='auth-section'>
+            <div className='auth-form'>
+              <form onSubmit={this.handleSubmit} className='box'>
+                <div className='form-header'>Instagramme</div>
+                <div className='form-description'>See and share photos with friends!</div>
                 <br />
+                {this.renderErrors()}
+
+                <div className='login-form'>
+                  {this.renderSignUp()}
                   <label>
                     <input
-                      placeholder="Password"
-                      type="password"
-                      value={this.state.password}
-                      onChange={this.update('password')}
+                      placeholder="Username"
+                      type="text"
+                      value={this.state.username}
+                      onChange={this.update('username')}
                       className='login-input' />
                   </label>
                   <br />
-                  <input
-                    className='button'
-                    type="submit"
-                    value="Submit" />
-                  <br />
-                  <input
-                    className='button'
-                    type="button"
-                    value="Guest Login"
-                    onClick={this.loginGuest} />
-              </div>
-            </form>
-            {this.navLink()}
-          </div>
+                    <label>
+                      <input
+                        placeholder="Password"
+                        type="password"
+                        value={this.state.password}
+                        onChange={this.update('password')}
+                        className='login-input' />
+                    </label>
+                    <br />
+                    <input
+                      className='button'
+                      type="submit"
+                      value="Submit" />
+                    <br />
+                    <input
+                      className='button'
+                      type="button"
+                      value="Guest Login"
+                      onClick={this.loginGuest} />
+                </div>
+              </form>
+              {this.navLink()}
+            </div>
+         </div>
+       </div>
+
+       <div className="about">
        </div>
      </section>
     );
