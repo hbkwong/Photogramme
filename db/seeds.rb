@@ -136,6 +136,24 @@ User.create!(
   profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1489970945/Hyun_Chul_Kim_ni1hcc.jpg"
 )
 
+User.create!(
+  username: "stephcurry30",
+  password: "password",
+  name: "Stephen Curry",
+  email: "stephcurry30@instagramme.com",
+  bio: "Starting PG for GSW",
+  profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1490391570/steph_v3tgzs.png"
+)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 # Photos
 
 Photo.delete_all
@@ -174,8 +192,6 @@ Photo.create!(
   location: "Laguna Beach, CA",
   user_id: 1
 )
-
-
 
 Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490342372/ryan-wilson-6626_uerlzl.jpg",
@@ -246,6 +262,19 @@ Photo.create!(
   location: "Lands End, San Francisco",
   user_id: 5
 )
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Likes
+
+Like.delete_all
 
 Like.create!(
   user_id: 1,
@@ -273,11 +302,6 @@ Like.create!(
 )
 
 Like.create!(
-  user_id: 1,
-  photo_id: 1
-)
-
-Like.create!(
   user_id: 2,
   photo_id: 1
 )
@@ -293,11 +317,6 @@ Like.create!(
 )
 
 Like.create!(
-  user_id: 1,
-  photo_id: 2
-)
-
-Like.create!(
   user_id: 2,
   photo_id: 2
 )
@@ -306,15 +325,66 @@ Like.create!(
   user_id: 3,
   photo_id: 2
 )
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Comments
+
+Comment.delete_all
 
 Comment.create!(
   photo_id: 1,
   user_id: 1,
-  body: "So cool! 😎"
+  body: "That's so awesomely retro!"
 )
 
 Comment.create!(
   photo_id: 2,
   user_id: 1,
   body: "Looks great! 😄"
+)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Follow
+
+Follow.delete_all
+
+Follow.create!(
+  follower_id: 1,
+  following_id: 15
+)
+
+Follow.create!(
+  follower_id: 1,
+  following_id: 2
+)
+
+Follow.create!(
+  follower_id: 1,
+  following_id: 3
+)
+
+Follow.create!(
+  follower_id: 1,
+  following_id: 4
+)
+
+Follow.create!(
+  follower_id: 1,
+  following_id: 5
 )
