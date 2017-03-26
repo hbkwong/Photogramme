@@ -258,8 +258,8 @@ Photo.create!(
 
 Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490342383/joshua-earle-133254_tjyqqg.jpg",
-  caption: "Gorgeous sunset!",
-  location: "Lands End, San Francisco",
+  caption: "On edge of the world",
+  location: "Lands End, SF",
   user_id: 5
 )
 #

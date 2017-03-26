@@ -131,7 +131,7 @@ class Profile extends React.Component {
 
       <section className="profile-photos">
         <ul className="post-grid">
-          { this.state.info.photos.map((photo, idx) => (
+          { this.state.info.photos.slice(0).reverse().map((photo, idx) => (
             <li key={idx} className="post-list-item">
               <img src={photo.url} />
             </li>))
