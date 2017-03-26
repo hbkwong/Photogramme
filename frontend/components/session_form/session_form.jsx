@@ -90,13 +90,13 @@ class SessionForm extends React.Component {
   navLink () {
     if (this.props.formType === 'login') {
       return (
-        <div className='box'>
+        <div className='box-link'>
           Don't have an account? <Link to="/signup"><strong>Sign up</strong></Link>
         </div>
       );
     } else {
       return (
-        <div className='box'>
+        <div className='box-link'>
           Have an account? <Link to="/login"><strong>Log in</strong></Link>
         </div>
 
@@ -108,6 +108,7 @@ class SessionForm extends React.Component {
     return (
       <section className='entire-auth'>
         <img className='auth-img' src="http://res.cloudinary.com/instagramme/image/upload/v1490390317/instagram-icon-blue-v2_mmlrmr.svg"/>
+
         <div className='auth-section'>
           <div className='auth-form'>
             <form onSubmit={this.handleSubmit} className='box'>
@@ -147,12 +148,9 @@ class SessionForm extends React.Component {
                     value="Guest Login"
                     onClick={this.loginGuest} />
               </div>
-
             </form>
-
             {this.navLink()}
           </div>
-
        </div>
      </section>
     );

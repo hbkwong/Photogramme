@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 44px;
 }
 
 .form-description {
@@ -27,10 +27,21 @@
 .box {
   background-color: #FFFFFF;
   border: 1px solid #efefef;
-  padding: 40px 40px 40px 40px;
+  padding: 36px 36px 36px 36px;
   margin-bottom: 15px;
   width: 300px;
   text-align: center;
+  border-radius: 8px;
+}
+
+.box-link {
+  background-color: #FFFFFF;
+  border: 1px solid #efefef;
+  padding: 20px 36px 20px 36px;
+  margin-bottom: 15px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .auth-form {
