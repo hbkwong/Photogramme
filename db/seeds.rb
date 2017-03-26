@@ -250,13 +250,6 @@ user_id: 15
 )
 
 Photo.create!(
-  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342377/denin-williams-690_ro4ufh.jpg",
-  caption: "Don't worry; be happy.",
-  location: "Carmel, CA",
-  user_id: 3
-)
-
-Photo.create!(
 url: "http://res.cloudinary.com/instagramme/image/upload/v1490490907/ishan-seefromthesky-179744_txanzt.jpg",
 caption: "Enjoying our honeymoon in paradise 😎",
 location: "Maldives",
@@ -279,18 +272,26 @@ Photo.create!(
 )
 
 Photo.create!(
-  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342383/joshua-earle-133254_tjyqqg.jpg",
-  caption: "On edge of the world",
-  location: "Lands End, SF",
-  user_id: 5
+url: "http://res.cloudinary.com/instagramme/image/upload/v1490490904/matias-larhag-117008_ix2mgo.jpg",
+caption: "Such a beautiful day",
+location: "Venice, Italy",
+user_id: 5
 )
 
 Photo.create!(
-  url: "http://res.cloudinary.com/instagramme/image/upload/v1490490904/matias-larhag-117008_ix2mgo.jpg",
-  caption: "Such a beautiful day",
-  location: "Venice, Italy",
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342377/denin-williams-690_ro4ufh.jpg",
+  caption: "Don't worry; be happy. 😃",
+  location: "Carmel, CA",
+  user_id: 3
+)
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342383/joshua-earle-133254_tjyqqg.jpg",
+  caption: "On edge of the world",
+  location: "Lands End, SF",
   user_id: 15
 )
+
 
 #
 #
@@ -355,6 +356,47 @@ Like.create!(
   user_id: 3,
   photo_id: 2
 )
+
+Like.create!(
+  user_id: 2,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 3,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 4,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 5,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 6,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 7,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 8,
+  photo_id: 19
+)
+
+Like.create!(
+  user_id: 1,
+  photo_id: 18
+)
+
 #
 #
 #
@@ -379,6 +421,30 @@ Comment.create!(
   photo_id: 2,
   user_id: 1,
   body: "Looks great! 😄"
+)
+
+Comment.create!(
+  photo_id: 19,
+  user_id: 6,
+  body: "What a beautiful view! Good luck in the playoffs, Steph!"
+)
+
+Comment.create!(
+  photo_id: 19,
+  user_id: 2,
+  body: "I've been there before! Great place to unwind and relax"
+)
+
+Comment.create!(
+  photo_id: 18,
+  user_id: 3,
+  body: "I love
+   this!"
+)
+Comment.create!(
+  photo_id: 18,
+  user_id: 5,
+  body: "I was there yesterday! So peaceful"
 )
 #
 #
