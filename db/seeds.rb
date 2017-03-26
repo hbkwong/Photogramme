@@ -187,17 +187,17 @@ Photo.create!(
 )
 
 Photo.create!(
+url: "http://res.cloudinary.com/instagramme/image/upload/v1490342372/ryan-wilson-6626_uerlzl.jpg",
+caption: "Serenity!",
+location: "Ireland",
+user_id: 2
+)
+
+Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490034213/web-agency-29200_ml8alz.jpg",
   caption: "Rustic.",
   location: "Laguna Beach, CA",
   user_id: 1
-)
-
-Photo.create!(
-  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342372/ryan-wilson-6626_uerlzl.jpg",
-  caption: "Serenity!",
-  location: "Ireland",
-  user_id: 2
 )
 
 Photo.create!(
@@ -215,17 +215,17 @@ Photo.create!(
 )
 
 Photo.create!(
+url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/felix-russell-saw-190802_sysui4.jpg",
+caption: "What a view!",
+location: "Monterey, CA",
+user_id: 3
+)
+
+Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/arnaud-mesureur-132213_s30pbd.jpg",
   caption: "Surfin' USA.",
   location: "Zuma Beach, CA",
   user_id: 2
-)
-
-Photo.create!(
-  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342376/felix-russell-saw-190802_sysui4.jpg",
-  caption: "What a view!",
-  location: "Monterey, CA",
-  user_id: 3
 )
 
 Photo.create!(
@@ -236,6 +236,20 @@ Photo.create!(
 )
 
 Photo.create!(
+url: "http://res.cloudinary.com/instagramme/image/upload/v1490342381/jakob-owens-205635_hcr8bm.jpg",
+caption: "Lens to the world",
+location: "Woodland Hills, CA",
+user_id: 4
+)
+
+Photo.create!(
+url: "http://res.cloudinary.com/instagramme/image/upload/v1490490907/dmitrii-bogdanov-93092_teas9e.jpg",
+caption: "See you on the slopes! 🏂",
+location: "Lake Tahoe, CA",
+user_id: 15
+)
+
+Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490342377/denin-williams-690_ro4ufh.jpg",
   caption: "Don't worry; be happy.",
   location: "Carmel, CA",
@@ -243,10 +257,10 @@ Photo.create!(
 )
 
 Photo.create!(
-  url: "http://res.cloudinary.com/instagramme/image/upload/v1490342381/jakob-owens-205635_hcr8bm.jpg",
-  caption: "Lens to the world",
-  location: "Woodland Hills, CA",
-  user_id: 4
+url: "http://res.cloudinary.com/instagramme/image/upload/v1490490907/ishan-seefromthesky-179744_txanzt.jpg",
+caption: "Enjoying our honeymoon in paradise 😎",
+location: "Maldives",
+user_id: 15
 )
 
 Photo.create!(
@@ -256,12 +270,28 @@ Photo.create!(
   user_id: 5
 )
 
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490490906/anthony-delanoix-48936_zefpt2.jpg",
+  caption: "Dropping off my kids to school! Great place.",
+  location: "London, England",
+  user_id: 15
+)
+
 Photo.create!(
   url: "http://res.cloudinary.com/instagramme/image/upload/v1490342383/joshua-earle-133254_tjyqqg.jpg",
   caption: "On edge of the world",
   location: "Lands End, SF",
   user_id: 5
 )
+
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1490490904/matias-larhag-117008_ix2mgo.jpg",
+  caption: "Such a beautiful day",
+  location: "Venice, Italy",
+  user_id: 15
+)
+
 #
 #
 #
