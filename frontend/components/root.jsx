@@ -4,9 +4,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import PhotoFormContainer from './photo_form/photo_form_container';
 import ProfileContainer from './profile/profile_container';
 import FeedContainer from './feed/feed_container';
-// react router
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-// react component
 import App from './app';
 
 const Root = ({ store }) => {

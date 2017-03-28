@@ -4,10 +4,6 @@ import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
 import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
 import { getIndex } from '../util/util';
 
-// const defaultState = {
-//   photos: []
-// };
-
 const feedReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
