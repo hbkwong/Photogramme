@@ -1,8 +1,8 @@
 # Instagramme
 
-![Instagramme Main Application](http://res.cloudinary.com/instagramme/image/upload/v1490392612/Screen_Shot_2017-03-24_at_2.11.58_PM_ojrwyb.png)
-
 Instagramme is a full-stack web application inspired by Instagram.
+
+![Instagramme Main Application](http://res.cloudinary.com/instagramme/image/upload/v1490392612/Screen_Shot_2017-03-24_at_2.11.58_PM_ojrwyb.png)
 
 Live site: [http://instagramme-aw.herokuapp.com]
 
