@@ -68,7 +68,7 @@ class PhotoForm extends React.Component {
             className="dropzone"
             onDrop={this.onImageDrop.bind(this)}>
             <div className="dropzone-msg">
-              {this.state.url === '' ? 'Drop and drop or select an image' :
+              {this.state.url === '' ? 'Drag-and-drop or select an image' :
               <div>
                 <img src={this.state.url} />
               </div>}
