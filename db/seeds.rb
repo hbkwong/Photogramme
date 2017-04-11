@@ -437,9 +437,8 @@ Comment.create!(
 
 Comment.create!(
   photo_id: 18,
-  user_id: 3,
-  body: "I love
-   this!"
+  user_id: 4,
+  body: "I love this!"
 )
 Comment.create!(
   photo_id: 18,
