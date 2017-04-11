@@ -1,12 +1,17 @@
 class Api::PhotosController < ApplicationController
   def index
     if current_user
-      users_arr = [current_user]
-      current_user.followings.each do |following|
-        users_arr << following
+      if current_user.followers.length == 0
+        @user = current_user
+        @photos = Photo.all
+      else
+        users_arr = [current_user]
+        current_user.followings.each do |following|
+          users_arr << following
+        end
+        @user = current_user
+        @photos = Photo.where(user: users_arr).order(created_at: :desc)
       end
-      @user = current_user
-      @photos = Photo.where(user: users_arr).order(created_at: :desc)
     end
   end
 
