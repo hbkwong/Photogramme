@@ -8,5 +8,6 @@ json.comments photo.comments do |comment|
   json.created_at comment.created_at
   json.user do
     json.extract! comment.user, :username
+    json.extract! comment.user, :id
   end
 end

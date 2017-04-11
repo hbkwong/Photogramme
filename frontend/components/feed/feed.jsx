@@ -100,7 +100,7 @@ class Feed extends React.Component {
               <div className="feed-photo-comments">
                 { photo.comments.map((comment, i) => (
                   <li className="feed-comments" key={i}>
-                    <strong>{comment.user.username}</strong> {comment.body}
+                    <Link className="feed-comment-username" to={`/${comment.user.id}`}><strong>{comment.user.username}</strong></Link> {comment.body}
                   </li>
                 ))}
               </div>
