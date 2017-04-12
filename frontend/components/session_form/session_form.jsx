@@ -113,7 +113,7 @@ class SessionForm extends React.Component {
           <div className='auth-section'>
             <div className='auth-form'>
               <form onSubmit={this.handleSubmit} className='box'>
-                <div className='form-header'>Instagramme</div>
+                <div className='form-header'>Photogramme</div>
                 <div className='form-description'>See and share photos with friends!</div>
                 <br />
                 {this.renderErrors()}

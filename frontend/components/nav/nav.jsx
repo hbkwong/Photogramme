@@ -23,7 +23,7 @@ class Nav extends React.Component {
             <Link className="nav-link" to="/">
               <img src="http://res.cloudinary.com/instagramme/image/upload/v1490041469/Instagram_Logo_rgofax.png"/>
               <div className="nav-divider"></div>
-              <div className="nav-instagramme">Instagramme</div>
+              <div className="nav-instagramme">Photogramme</div>
             </Link>
           </div>
 
