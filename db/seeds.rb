@@ -13,10 +13,10 @@ User.delete_all
 guest = User.create!(
   username: "guest",
   password: "password",
-  name: "Guest User",
+  name: "Dog Doggerson",
   email: "guest@guest.com",
-  bio: "I am a guest user of Photogramme 😎",
-  profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1489969971/5w9Q2MF_yofpor.jpg"
+  bio: "WOOF! I am a guest user of Photogramme 😎",
+  profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1491887414/happy-dog2_zbx1bp.jpg"
 )
 
 User.create!(
