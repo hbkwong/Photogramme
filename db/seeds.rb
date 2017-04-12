@@ -292,6 +292,13 @@ Photo.create!(
   user_id: 15
 )
 
+Photo.create!(
+  url: "http://res.cloudinary.com/instagramme/image/upload/v1491957084/michal-pechardo-182872_y8uuaf.jpg",
+  caption: "Cruising along the Great Highway. I love this city! 🌉",
+  location: "Ocean Beach, SF",
+  user_id: 15
+)
+
 
 #
 #
@@ -397,6 +404,11 @@ Like.create!(
   photo_id: 18
 )
 
+Like.create!(
+  user_id: 8,
+  photo_id: 20
+)
+
 #
 #
 #
@@ -440,10 +452,23 @@ Comment.create!(
   user_id: 4,
   body: "I love this!"
 )
+
 Comment.create!(
   photo_id: 18,
   user_id: 5,
   body: "I was there yesterday! So peaceful"
+)
+
+Comment.create!(
+  photo_id: 20,
+  user_id: 3,
+  body: "I love San Francisco!"
+)
+
+Comment.create!(
+  photo_id: 20,
+  user_id: 4,
+  body: "Great photo! Did you take it from the Great Highway?"
 )
 #
 #

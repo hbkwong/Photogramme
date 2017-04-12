@@ -77,7 +77,9 @@ class Feed extends React.Component {
           <li className="feed-post" key={idx}>
             <div className="feed-photo-header">
               <div className="feed-user-info">
-                <img src={photo.user.profile_photo_url} />
+                <Link className="feed-username" to={`/${photo.user.id}`}>
+                  <img src={photo.user.profile_photo_url} />
+                </Link>
                 <div className="username-and-location">
                   <Link className="feed-username" to={`/${photo.user.id}`}>
                     {photo.user.username}
