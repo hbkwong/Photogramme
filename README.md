@@ -1,12 +1,12 @@
-# Instagramme
+# Photogramme
 
-Instagramme is a full-stack web application inspired by Instagram.
+Photogramme is a full-stack web application inspired by Instagram.
 
-![Instagramme Main Application](http://res.cloudinary.com/instagramme/image/upload/v1490392612/Screen_Shot_2017-03-24_at_2.11.58_PM_ojrwyb.png)
+![Photogramme Main Application](http://res.cloudinary.com/instagramme/image/upload/v1490392612/Screen_Shot_2017-03-24_at_2.11.58_PM_ojrwyb.png)
 
-Live site: [http://instagramme-aw.herokuapp.com]
+Live site: [http://photogramme.herokuapp.com]
 
-Instagramme utilizes the following:
+Photogramme utilizes the following:
 
 - Ruby on Rails
 - React.js
@@ -74,11 +74,11 @@ end
 
 ### Direct Photo Uploading
 
-Users are able to upload photos directly into their Instagramme account.
+Users are able to upload photos directly into their Photogramme account.
 
 ![Photo Uploader](http://res.cloudinary.com/instagramme/image/upload/v1490395340/Screen_Shot_2017-03-24_at_3.41.22_PM_jkmooe.png)
 
-Unlike server-side tools such as Paperclip, Instagramme uses a number of tools to facilitate file uploads:
+Unlike server-side tools such as Paperclip, Photogramme uses a number of tools to facilitate file uploads:
 
 - react-dropzone accepts an image via drag-and-drop (or manual selection)
 - superagent transfers the uploaded image

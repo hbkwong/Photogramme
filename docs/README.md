@@ -1,14 +1,14 @@
-# Instagramme
+# Photogramme
 [Heroku link][heroku]
 
 [Trello link][trello]
 
-[heroku]: https://instagramme-aw.herokuapp.com
+[heroku]: https://photogramme.herokuapp.com
 [trello]: https://trello.com/b/5D0Wgko3/full-stack-project-instagramme
 
 
 ## Minimum Viable Product
-Instagramme is a web application inspired by Instagram built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data, and sufficient CSS styling:
+Photogramme is a web application inspired by Instagram built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data, and sufficient CSS styling:
 - [ ] Production README
 - [ ] New account creation, login, and guest/demo login
 - [ ] Hosting on Heroku

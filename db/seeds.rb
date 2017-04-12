@@ -15,7 +15,7 @@ guest = User.create!(
   password: "password",
   name: "Guest User",
   email: "guest@guest.com",
-  bio: "I am a guest user of Instagramme 😎",
+  bio: "I am a guest user of Photogramme 😎",
   profile_photo_url: "http://res.cloudinary.com/instagramme/image/upload/v1489969971/5w9Q2MF_yofpor.jpg"
 )
 
