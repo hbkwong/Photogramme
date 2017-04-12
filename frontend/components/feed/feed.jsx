@@ -97,7 +97,7 @@ class Feed extends React.Component {
                 {photo.likes.length} {photo.likes.length === 1 ? "Like" : "Likes"}
               </div>
               <div className="feed-caption">
-                <strong>{photo.user.username}</strong> {photo.caption}
+                <Link className="feed-comment-username" to={`/${photo.user.id}`}><strong>{photo.user.username}</strong></Link> {photo.caption}
               </div>
               <div className="feed-photo-comments">
                 { photo.comments.map((comment, i) => (
