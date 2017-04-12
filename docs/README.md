@@ -3,7 +3,7 @@
 
 [Trello link][trello]
 
-[heroku]: https://photogramme.herokuapp.com
+[heroku]: https://photogramme.info
 [trello]: https://trello.com/b/5D0Wgko3/full-stack-project-instagramme
 
 

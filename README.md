@@ -4,7 +4,7 @@ Photogramme is a full-stack web application inspired by Instagram.
 
 ![Photogramme Main Application](http://res.cloudinary.com/instagramme/image/upload/v1491958102/Screen_Shot_2017-04-11_at_5.47.16_PM_iir1el.png)
 
-Live site: [http://photogramme.herokuapp.com]
+Live site: [http://photogramme.info]
 
 Photogramme utilizes the following:
 
