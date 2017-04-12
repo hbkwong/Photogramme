@@ -155,7 +155,7 @@ Users can Like and Comment on photos displayed in the feed.
 
 Users have personalized profiles to display their details and photos.
 
-![User Profile](http://res.cloudinary.com/instagramme/image/upload/v1490392612/Screen_Shot_2017-03-24_at_2.49.59_PM_fw1gkc.png)
+![User Profile](http://res.cloudinary.com/instagramme/image/upload/v1491964934/Screen_Shot_2017-04-11_at_7.41.25_PM_ioyma5.png)
 
 Users can subscribe to other user's content by simply Following them.
 
