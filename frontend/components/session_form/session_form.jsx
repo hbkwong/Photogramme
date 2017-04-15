@@ -143,6 +143,11 @@ class SessionForm extends React.Component {
                       type="submit"
                       value="Submit" />
                     <br />
+                      <div className="or">
+                        <div className="horizontal"></div>
+                        <p>  OR  </p>
+                        <div className="horizontal"></div>
+                      </div>
                     <input
                       className='button'
                       type="button"

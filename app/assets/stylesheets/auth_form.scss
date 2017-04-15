@@ -4,6 +4,23 @@
   flex-direction: column;
 }
 
+.or {
+  color: #999;
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.horizontal {
+  border-top: 1px solid #c7c7c7;
+  width: 80px;
+  padding-right: 10px;
+}
+
 .auth-img {
   max-width: 300px;
   display: flex;

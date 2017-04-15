@@ -59,5 +59,5 @@ Photogramme is a web application inspired by Instagram built using Ruby on Rails
 **Objective:** User profile pages can be viewed and navigated through the API.
 
 ### Bonus features (TBD)
+- [ ] Photo Item Detail
 - [ ] Hashtags
-- [ ] Direct messaging
