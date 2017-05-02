@@ -43,8 +43,27 @@ class SessionForm extends React.Component {
   }
 
   loginGuest () {
-    const user = {username: "guest", password: "password"};
-    this.props.login(user);
+    event.preventDefault();
+    let guestUsername = "guest".split('');
+    let guestPassword = "password".split('');
+
+    this.setState({
+      username: "",
+      password: ""
+    });
+
+    let interval = setInterval( () => {
+      if (guestUsername.length) {
+        this.setState({ username: this.state.username + guestUsername.shift() });
+      }
+      else if (guestPassword.length) {
+        this.setState({ password: this.state.password + guestPassword.shift() });
+      }
+      else {
+        clearInterval(interval);
+        this.props.login(this.state);
+      }
+    }, 70);
   }
 
   renderErrors () {
