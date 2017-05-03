@@ -147,7 +147,7 @@ class PhotoForm extends React.Component {
 
 An index of photos from users followed by the current user are displayed upon login.
 
-![Photo Feed View](http://res.cloudinary.com/instagramme/image/upload/v1490395141/Screen_Shot_2017-03-24_at_3.27.36_PM_vosfh4.png)
+![Photo Feed View](docs/photogrammeexample.gif)
 
 Users can Like and Comment on photos displayed in the feed.
 
