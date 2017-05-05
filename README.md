@@ -145,11 +145,33 @@ class PhotoForm extends React.Component {
 
 ### Photo Feed
 
-An index of photos from users followed by the current user are displayed upon login.
+Upon login, users are able to see a feed of photos from (sorted by date). Users may Like and Comment on photos displayed in the feed.
 
 ![Photo Feed View](docs/photogrammeexample.gif)
 
-Users can Like and Comment on photos displayed in the feed.
+In the case that the user has no followers, Photogramme currently displays photos from all users.
+
+```ruby
+class Api::PhotosController < ApplicationController
+  #...
+  
+  def index
+    if current_user
+      if current_user.followers.length.zero?
+        @user = current_user
+        @photos = Photo.all
+      else
+        users_arr = [current_user]
+        current_user.followings.each { |following| users_arr << following }
+        @user = current_user
+        @photos = Photo.where(user: users_arr).order(created_at: :desc)
+      end
+    end
+  end
+
+  # ...
+end
+```
 
 ### User Profile
 
