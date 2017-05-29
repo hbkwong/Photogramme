@@ -2,7 +2,7 @@
 
 Photogramme is a full-stack web application inspired by Instagram.
 
-![Photogramme Main Application](http://res.cloudinary.com/instagramme/image/upload/v1491958102/Screen_Shot_2017-04-11_at_5.47.16_PM_iir1el.png)
+![Photogramme Main Application](app/assets/images/feed.png)
 
 Live site: [http://photogramme.info]
 
@@ -15,7 +15,7 @@ Photogramme utilizes the following:
 - jQuery
 - jBuilder
 - BCrypt
-- Cloudinary
+- Cloudinary API
 - Heroku
 - react-router
 - react-dropzone
@@ -76,7 +76,7 @@ end
 
 Users are able to upload photos directly into their Photogramme account.
 
-![Photo Uploader](http://res.cloudinary.com/instagramme/image/upload/v1491958249/Screen_Shot_2017-04-11_at_5.50.20_PM_r0n4yo.png)
+![Photo Uploader](app/assets/images/photo_form.png)
 
 Unlike server-side tools such as Paperclip, Photogramme uses a number of tools to facilitate file uploads:
 
@@ -154,7 +154,7 @@ In the case that the user has no followers, Photogramme currently displays photo
 ```ruby
 class Api::PhotosController < ApplicationController
   #...
-  
+
   def index
     if current_user
       if current_user.followers.length.zero?
@@ -177,7 +177,7 @@ end
 
 Users have personalized profiles to display their details and photos.
 
-![User Profile](http://res.cloudinary.com/instagramme/image/upload/v1491964934/Screen_Shot_2017-04-11_at_7.41.25_PM_ioyma5.png)
+![User Profile](app/assets/images/profile.png)
 
 Users can subscribe to other user's content by simply Following them.
 
@@ -187,13 +187,13 @@ Users can subscribe to other user's content by simply Following them.
 
 Early in production, detailed wireframes were produced
 
-![Login](http://res.cloudinary.com/instagramme/image/upload/v1490396363/login_csm1cf.png)
+![Login](docs/wireframes/login.png)
 
-![Photo Feed Item](http://res.cloudinary.com/instagramme/image/upload/v1490396363/feed_photo_uwlfm1.png)
+![Photo Feed Item](docs/wireframes/feed_photo.png)
 
-![Photo Feed](http://res.cloudinary.com/instagramme/image/upload/v1490396363/feed_zusbem.png)
+![Photo Feed](docs/wireframes/feed.png)
 
-![User Profile](http://res.cloudinary.com/instagramme/image/upload/v1490396363/profile_gpmxs7.png)
+![User Profile](docs/wireframes/profile.png)
 
 ## Future Release
 * [ ] Photo Details
