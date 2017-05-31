@@ -2,7 +2,7 @@
 
 Photogramme is a full-stack web application inspired by Instagram.
 
-![Photogramme Main Application](app/assets/images/feed.png)
+![Photogramme Main Application](app/assets/images/photogrammeexample.gif)
 
 Live site: [http://photogramme.info]
 
@@ -147,7 +147,7 @@ class PhotoForm extends React.Component {
 
 Upon login, users are able to see a feed of photos from (sorted by date). Users may Like and Comment on photos displayed in the feed.
 
-![Photo Feed View](docs/photogrammeexample.gif)
+![Photo Feed View](app/assets/images/feed.png)
 
 In the case that the user has no followers, Photogramme currently displays photos from all users.
 
